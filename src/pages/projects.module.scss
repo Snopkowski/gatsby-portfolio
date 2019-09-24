@@ -1,0 +1,14 @@
+.items {
+    list-style: none;
+    margin: 0;
+
+}
+
+.item {
+    padding: 3rem 0;
+    border-bottom: 2px solid var(--textNormal);
+
+    &:last-child {
+        border-bottom: none;
+    }
+}

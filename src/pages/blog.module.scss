@@ -1,0 +1,26 @@
+.posts {
+    list-style-type: none;
+    margin: 0;
+}
+
+.post {
+    margin: 1rem 0;
+
+    a {
+
+        display: block;
+        padding: 1rem 0;
+        text-decoration: none;
+    }
+
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        // color: #777777;
+        font-size: 0.7rem;
+        font-size: italic;
+    }
+}

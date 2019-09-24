@@ -1,0 +1,45 @@
+a {
+    color: var(--textNormal);
+}
+
+.nav {
+    padding-top: 1rem 0 3rem;
+   
+}
+
+.title {
+    font-size: 2.25rem;
+    text-decoration: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.nav-main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-start;
+    margin: 0;
+    width: 100%;
+    flex-direction: row;
+}
+
+.nav-item {
+    font-size: .9rem;
+    margin-right: 1.3rem;
+    text-decoration: none;
+}
+.active-nav-item {
+    color: var(--textLink);
+}
+
+.nav-item:last-child {
+    display: flex;
+    align-items: center;
+}
+
+
