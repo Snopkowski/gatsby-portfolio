@@ -16,6 +16,7 @@ html {
     --textLink: #d86a7e;
     --hr: hsla(0, 0%, 0%, 0.2);
     background-color: var(--bg);
+    --bgCode: #f3f3f3;
   }
   body.dark {
     -webkit-font-smoothing: antialiased;
@@ -23,7 +24,8 @@ html {
     --textNormal: #d86a7e;
     --textTitle: white;
     --textLink: azure;
-    --hr: hsla(0, 0%, 100%, 0.2);
+    --hr: #d86a7e;
+    --bgCode: #272727;
   }
 
   ::selection {
@@ -429,7 +431,7 @@ html {
     margin-bottom: 1.45rem;
     font-size: 0.85rem;
     line-height: 1.42;
-    background: hsla(0, 0%, 0%, 0.04);
+    background: var(--bgCode);
     border-radius: 3px;
     overflow: auto;
     word-wrap: normal;
@@ -438,12 +440,12 @@ html {
   table {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 0;
+    margin-top: 1rem;
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
+    margin-bottom: 2.45rem;
     font-size: 1rem;
     line-height: 1.45rem;
     border-collapse: collapse;
@@ -508,7 +510,7 @@ html {
     padding-right: 0;
     padding-top: 0;
     margin-bottom: calc(1.45rem - 1px);
-    background: hsla(0, 0%, 0%, 0.2);
+    background: var(--bgCode);
     border: none;
     height: 1px;
   }
@@ -596,7 +598,7 @@ html {
   td,
   th {
     text-align: left;
-    border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+    border-bottom: 2px solid var(--bgCode);
     font-feature-settings: "tnum";
     -moz-font-feature-settings: "tnum";
     -ms-font-feature-settings: "tnum";
