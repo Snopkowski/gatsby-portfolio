@@ -22,18 +22,11 @@ module.exports = {
         trackingId: "UA-147523947-1",
       },
     },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        
-
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-      },
-    },
     "gatsby-plugin-sass",
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sharp",
+    "gatsby-transformer-remark",
+    
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -42,32 +35,28 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 750,
-              linkImagesToOriginal: false,
-            },
-          },
+              maxWidth: 800,
+            }
+          }
         ],
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: `${__dirname}/src/`
-      },
-    },
-
     
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src`,
+        name: 'src',
+      }
+    },
+  
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Wojciech Snopkowski`,
-        short_name: `Snopkowski`,
+        short_name: `WS`,
         start_url: `/`,
         icon: `src/images/icon.png`,
-        background_color: `#fff`,
-        theme_color: `#111`,
-        display: `minimal-ui`,
       },
     },
     `gatsby-plugin-offline`,

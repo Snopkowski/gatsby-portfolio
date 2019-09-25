@@ -6,21 +6,26 @@ import PortfolioItem from "../templates/portfolioItem"
 import projectsStyles from './projects.module.scss'
 
 const Projects = () => {
-  const { allContentfulProjectItem: items } = useStaticQuery(graphql`
+  const { allMarkdownRemark: items } = useStaticQuery(graphql`
     query {
-      allContentfulProjectItem {
+      allMarkdownRemark (filter: {frontmatter: {type: {eq: "project"}}}) { 
         edges {
           node {
-            code
-            live
-            stack
-            title
-            description
-            image {
-              sizes(maxWidth: 1280) {
-                ...GatsbyContentfulSizes
-              }
+            frontmatter {
+              title
+              live
+              stack
+              source
+              description
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 800, quality: 80) {
+                    ...GatsbyImageSharpFluid_tracedSVG
             }
+          }
+        }
+            }
+            
           }
         }
       }
@@ -35,7 +40,9 @@ const Projects = () => {
       <ol className={projectsStyles.items}>
 
       {items.edges.map(item => (
-        <li className={projectsStyles.item}><PortfolioItem portfolio={item.node} /></li>
+        <li className={projectsStyles.item}>
+          <PortfolioItem portfolio={item.node} />
+        </li>
         ))}
       </ol>
       <h3>See more at: <a href="https://github.com/Snopkowski/">github.com/Snopkowski/</a></h3>
