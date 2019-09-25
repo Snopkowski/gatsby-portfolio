@@ -10,6 +10,7 @@ query($slug: String!) {
     frontmatter {
       title
       slug
+      date
     }
     html
   }
@@ -21,11 +22,10 @@ const Blog = ({data})=> {
     <Layout>
       <Head title={post.frontmatter.title}/>
       <h1>{post.frontmatter.title}</h1>
-      {/* <Img fluid={post.frontmatter.image.childImageSharp.fluid} /> */}
+      <p>Published: {post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
 }
-
 
 export default Blog

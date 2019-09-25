@@ -14,6 +14,7 @@ const BlogPage = () => {
               frontmatter {
                 title
                 slug
+                date
               }
             }
           }
@@ -31,6 +32,7 @@ const BlogPage = () => {
                             <li className={blogStyles.post}>
                                 <Link to={`/blog/${edge.node.frontmatter.slug}`}>
                                     <h2>{edge.node.frontmatter.title}</h2>
+                                    <p>{edge.node.frontmatter.date}</p>
                                 </Link>
                             </li>
                         )

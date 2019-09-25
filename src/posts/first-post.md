@@ -2,6 +2,7 @@
 title: 'First post'
 slug: 'first-post'
 type: 'blog'
+date: '25th September 2019'
 ---
 ## Not really after all
 Used to play with contentful, but I think I'll stick to markdown

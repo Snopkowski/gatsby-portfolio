@@ -32,10 +32,11 @@ module.exports = {
       options: {
         plugins: [
           "gatsby-remark-relative-images",
+          `gatsby-remark-lazy-load`,
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 800,
+              maxWidth: 900,
             }
           }
         ],
