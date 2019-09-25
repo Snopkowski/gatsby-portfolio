@@ -9,7 +9,6 @@ date: '25th September 2019'
 
  And it is indeed.
 
-![Gatsby image](https://i.guim.co.uk/img/media/cc5ff87a032ce6e4144e63a2a1cbe476dbc7cd5a/273_0_3253_1952/master/3253.jpg?width=300&quality=85&auto=format&fit=max&s=5d5ec52176d9eaf902e0beaf5da32fc2)
 
 ### CSS
 CSS modules are used in this project. Grouping some of them will definitely make the files panel look neat-ish.

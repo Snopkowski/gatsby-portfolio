@@ -34,6 +34,13 @@ module.exports = {
           "gatsby-remark-relative-images",
           `gatsby-remark-lazy-load`,
           {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'noreferrer',
+            }
+          },
+          {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 900
