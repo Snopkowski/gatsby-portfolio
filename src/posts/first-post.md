@@ -29,6 +29,6 @@ Never been too fond of writing.
 Meanwhile I'll watch the video of Dev Ed about logo: That's what I need. Don't really care that much about it now... it's just the complier has got an error because the current image is not square. 
 
 
-[![Dev Ed's video](http://img.youtube.com/vi/Vy83OJvc_As/0.jpg)](http://www.youtube.com/watch?v=Vy83OJvc_As)
+[![Dev Ed's video](https://img.youtube.com/vi/Vy83OJvc_As/0.jpg)](https://www.youtube.com/watch?v=Vy83OJvc_As)
 
 
