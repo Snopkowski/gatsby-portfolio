@@ -1,14 +1,34 @@
 ---
-title: 'First post'
-slug: 'first-post'
+title: 'About this portfolio'
+slug: 'about-this-portfolio'
 type: 'blog'
 date: '25th September 2019'
 ---
-## Not really after all
-Used to play with contentful, but I think I'll stick to markdown
+## The reason
+ The reason behind using Gatsby is that I wanted something fast, SEO optimized and easy to maintain to keep my portfolio up to date.
 
-### Random text below
-Inquietude simplicity terminated she compliment remarkably few her nay. The weeks are ham asked jokes. Neglected perceived shy nay concluded. Not mile draw plan snug next all. Houses latter an valley be indeed wished merely in my. Money doubt oh drawn every or an china. Visited out friends for expense message set eat. 
+ And it is indeed.
 
-![Awesome image](images/honeymoon2.jpg)
+![Gatsby image](https://i.guim.co.uk/img/media/cc5ff87a032ce6e4144e63a2a1cbe476dbc7cd5a/273_0_3253_1952/master/3253.jpg?width=300&quality=85&auto=format&fit=max&s=5d5ec52176d9eaf902e0beaf5da32fc2)
+
+### CSS
+CSS modules are used in this project. Grouping some of them will definitely make the files panel look neat-ish.
+
+![Messy files panel](images/mess.png)
+
+### Markdown 
+Got some cheatsheet here for myself: [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### Finishing this blog post
+I'll definitely finish this blog post, but there's still a lot of things that I'd like to change before I'll write something about it.
+
+Never been too fond of writing.
+
+
+### Logo
+Meanwhile I'll watch the video of Dev Ed about logo: That's what I need. Don't really care that much about it now... it's just the complier has got an error because the current image is not square. 
+
+
+[![Dev Ed's video](http://img.youtube.com/vi/Vy83OJvc_As/0.jpg)](http://www.youtube.com/watch?v=Vy83OJvc_As)
+
 

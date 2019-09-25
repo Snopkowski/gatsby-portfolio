@@ -2,17 +2,18 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Head from '../components/head'
+import postStyles from './blogItem.module.scss'
 
 export const query = graphql`
 query($slug: String!) {
   markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-    html
     frontmatter {
       title
       slug
       date
     }
     html
+    timeToRead
   }
 }
 `
@@ -22,7 +23,8 @@ const Blog = ({data})=> {
     <Layout>
       <Head title={post.frontmatter.title}/>
       <h1>{post.frontmatter.title}</h1>
-      <p>Published: {post.frontmatter.date}</p>
+      <p className={postStyles.dateAndTime} >{post.frontmatter.date} | Time to read: {post.timeToRead} minute</p>
+
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
