@@ -33,7 +33,7 @@ const BlogPage = () => {
                             <li className={blogStyles.post}>
                                 <Link to={`/blog/${edge.node.frontmatter.slug}`}>
                                     <h2>{edge.node.frontmatter.title}</h2>
-                                    <p>{edge.node.frontmatter.date} | Time to read: {edge.node.timeToRead} minute.</p>
+                                    <p>{edge.node.frontmatter.date} | {edge.node.timeToRead} min read</p>
                                 </Link>
                             </li>
                         )

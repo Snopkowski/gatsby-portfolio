@@ -23,3 +23,6 @@ And it also let's me to get used to writing markdown files.
 
 ### Markdown
 [MD](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### ENV Variables 
+These are pretty tricky to work with. [Env Variables](https://kyleshevlin.com/firebase-and-gatsby-together-at-last)

@@ -8,7 +8,7 @@ import projectsStyles from './projects.module.scss'
 const Projects = () => {
   const { allMarkdownRemark: items } = useStaticQuery(graphql`
     query {
-      allMarkdownRemark (filter: {frontmatter: {type: {eq: "project"}}}) { 
+      allMarkdownRemark (filter: {frontmatter: {type: {eq: "project"}}}, sort: {fields: frontmatter___order}) { 
         edges {
           node {
             frontmatter {
