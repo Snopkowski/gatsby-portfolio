@@ -1,5 +1,5 @@
 import React from 'react'
-import portfolioItemStyles from './portfolioItem.module.scss'
+import portfolioItemStyles from '../styles/portfolioItem.module.scss'
 import Img from 'gatsby-image'
 
 const PortfolioItem = ({portfolio}) => {

@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import { useStaticQuery, graphql } from "gatsby"
 import PortfolioItem from "../templates/portfolioItem"
-import projectsStyles from './projects.module.scss'
+import projectsStyles from '../styles/projects.module.scss'
 
 const Projects = () => {
   const { allMarkdownRemark: items } = useStaticQuery(graphql`

@@ -2,7 +2,7 @@ import React from "react"
 import Head from "../components/head"
 import Layout from "../components/layout"
 
-import contactStyles from './contact.module.scss'
+import contactStyles from '../styles/contact.module.scss'
 
 const Contact = () => {
   return (

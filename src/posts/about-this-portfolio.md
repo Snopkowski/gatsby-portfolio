@@ -4,10 +4,7 @@ slug: 'about-this-portfolio'
 type: 'blog'
 date: '25th September 2019'
 ---
-## The reason
- The reason behind using Gatsby is that I wanted something fast, SEO optimized and easy to maintain to keep my portfolio up to date.
 
- And it is indeed.
 
 
 ### CSS
