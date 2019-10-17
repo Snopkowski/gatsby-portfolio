@@ -66,6 +66,9 @@ module.exports = {
         short_name: `WS`,
         start_url: `/`,
         icon: `src/images/icon.png`,
+        display: `minimal-ui`,
+        background_color: `#111`,
+        theme_color: `#d86a7e`
       },
     },
     `gatsby-plugin-offline`,
