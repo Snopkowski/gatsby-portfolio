@@ -24,7 +24,6 @@ const Blog = ({data})=> {
       <Head title={post.frontmatter.title}/>
       <h1>{post.frontmatter.title}</h1>
       <p className={postStyles.dateAndTime} >{post.frontmatter.date} | {post.timeToRead} min read</p>
-
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )

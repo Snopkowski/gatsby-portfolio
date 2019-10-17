@@ -7,22 +7,12 @@ date: '23th September 2019'
 
 ## It's for my own reference 
 
-And it also let's me to get used to writing markdown files.
+[DevDocs](https://devdocs.io/)
 
-|       Done                   |         To do         |
-|:----------------------------:|:---------------------:|
-| Ditch contentful             | Write a 'meaningful' post |
-|          Lazy loading        |       Unify CSS       |
-|            Remark links      | Make logo square      |
+[Gatsby documentation](https://www.gatsbyjs.org/docs/)
 
-### Devdocs 
-[DevDocs Api Documentation](https://devdocs.io/)
 
-### Gatsby Docs 
-[Gatsby](https://www.gatsbyjs.org/docs/)
+[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-### Markdown
-[MD](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-### ENV Variables 
-These are pretty tricky to work with. [Env Variables](https://kyleshevlin.com/firebase-and-gatsby-together-at-last)
+These are pretty tricky to work with - [Env Variables](https://kyleshevlin.com/firebase-and-gatsby-together-at-last)
