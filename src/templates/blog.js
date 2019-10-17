@@ -11,6 +11,8 @@ query($slug: String!) {
       title
       slug
       date
+      description
+      keywords
     }
     html
     timeToRead
@@ -21,7 +23,7 @@ const Blog = ({data})=> {
   const post = data.markdownRemark
   return (
     <Layout>
-      <Head title={post.frontmatter.title}/>
+      <Head title={post.frontmatter.title} description={post.frontmatter.description} keywords={post.frontmatter.keywords}/>
       <h1>{post.frontmatter.title}</h1>
       <p className={postStyles.dateAndTime} >{post.frontmatter.date} | {post.timeToRead} min read</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />

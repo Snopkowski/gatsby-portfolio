@@ -10,6 +10,7 @@ module.exports = {
     author: "Wojciech Snopkowski",
     description: "I'm Wojciech, a Front-End Developer based in Birmingham, UK.",
     siteUrl: "https://snopkowski.com",
+    keywords: 'web developer, developer, birmingham, west midlands, javascript, website, wojciech snopkowski, snopkowski'
   },
   plugins: [
     `gatsby-plugin-netlify`,

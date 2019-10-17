@@ -8,7 +8,7 @@ const IndexPage = () => {
   return (
     <div>
       <Layout>
-        <Head title="Home"/>
+        <Head title="Home" />
         <h1 className={indexStyles.mainHeading}>Hello, my name is Wojciech. I'm a Web Developer based in Birmingham, UK.</h1>
         <h3>About</h3>
         <p>Looking forward to a much deeper dive into coding and programming. I’ve noticed as a self-taught Web Developer, learning about this field has a tremendous momentum to it. I am determined to contribute to this momentum, especially since I am now pursuing my passion to become a professional developer.</p>

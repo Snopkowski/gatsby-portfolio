@@ -3,6 +3,8 @@ title: 'Why I chose Gatsby for my portfolio website'
 slug: 'why-i-chose-gatsby-for-my-portfolio-website'
 type: 'blog'
 date: 'October 17th 2019'
+description: 'This is my take on using Gatsby for a perfonal website'
+keywords: 'gatsby, portfolio, compare, seo, reasons to choose gatsby'
 ---
 
 ## I needed a new portfolio
