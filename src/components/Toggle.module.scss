@@ -1,36 +1,18 @@
 .darkModeToggle {
   display: flex;
-  & > button {
-    font-size: 1.5em;
-    background: none;
-    border: none;
-    color: #ffd900;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    &:last-child {
-      color: cornflowerblue;
-    }
-    &:focus {
-      outline: none;
-    }
-  }
 }
-
 .toggleControl {
   position: relative;
-  padding: 0 4px;
+  padding: 0 .2rem;
   display: flex;
   align-items: center;
 }
-
 input[type='checkbox'].dmcheck {
-    width: 40px;
-    height: 10px;
+    width: 2.5rem;
+    height: .5rem;
     background: var(--bgCode);
     position: relative;
     border-radius: 5px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     cursor: pointer;
     outline: none;
@@ -53,9 +35,8 @@ input[type='checkbox'].dmcheck {
       cursor: pointer;
       position: absolute;
       left: 2px;
-      background: #fff;
-      opacity: 0.9;
       background-color: var(--textNormal);
+      
     }
   }
   
