@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import './nav.module.scss'
-import Toggler from './ThemeToggler'
+import DarkModeToggle from './DarkModeToggle'
 
 import navStyles from './nav.module.scss';
 
@@ -27,7 +27,7 @@ const Nav = () => {
                     <li><Link className={navStyles.navItem} activeClassName={navStyles.activeNavItem} to='/blog'>Blog</Link></li>
                     <li><Link className={navStyles.navItem} activeClassName={navStyles.activeNavItem} to='/contact'>Contact</Link></li>
                 </ul>
-                    <Toggler/>
+                    <DarkModeToggle />
             </nav>
         </header>
     )

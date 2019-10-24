@@ -37,7 +37,7 @@ frequent updates* - constantly updating values - like once every second.
 
 Unlike next.js, a Gatsby site can be hosted on [netlify](https://www.netlify.com) free of charge.
 
-![Choosingwisely](images/yoda.jpg)
+![Choosing wisely](images/yoda.jpg)
 
 ## Why did I choose Gatsby?
 
@@ -84,6 +84,8 @@ The issues described above helped me to make my mind about it. I would try anoth
 I wanted to get a better grasp of what markdown language is, how to use it effectively and get good at it. Found a really useful [cheat sheet by Adam Pritchard](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code) to get familiar with creating markdown files. 
 
 ## Summary
+
 I got to admit that I enjoyed the development process using Gatsby. I'm glad that I made this choice for a project like a portfolio website - I would choose it again.
 By all means, I don't consider myself a highly proficient using it, but I have to note that Gatsby has incredible [documentation](https://www.gatsbyjs.org/docs/) and [tutorials](https://www.gatsbyjs.org/tutorial/) to get you up and running fairly quickly. I'm looking forward to building more project using it.
 
+![Portfolio audit](images/audit.png)

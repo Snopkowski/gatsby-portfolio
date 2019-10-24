@@ -17,21 +17,28 @@ a {
 .nav-main {
     display: flex;
     justify-content: space-around;
+
+
 }
 
 .nav-list {
     display: flex;
     list-style-type: none;
     justify-content: flex-start;
-    margin: 0;
+    margin-left: 0;
     width: 100%;
     flex-direction: row;
+    margin-bottom: 0;
+
 }
 
 .nav-item {
     font-size: .9rem;
     margin-right: 1.3rem;
     text-decoration: none;
+    margin-top: .5rem;
+    
+
 }
 .active-nav-item {
     color: var(--textLink);
@@ -39,7 +46,7 @@ a {
 
 .nav-item:last-child {
     display: flex;
-    align-items: center;
+
 }
 
 

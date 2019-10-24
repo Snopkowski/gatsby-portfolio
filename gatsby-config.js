@@ -14,7 +14,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {

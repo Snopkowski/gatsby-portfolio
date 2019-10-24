@@ -6,26 +6,25 @@ html {
     -webkit-text-size-adjust: 100%;
     
   }
-  body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    --bg: white;
+  body.light-mode {
+    --bg: #f0f0f0;
     --textNormal: #222;
     --textTitle: #222;
     --textLink: #d86a7e;
     --hr: hsla(0, 0%, 0%, 0.2);
     background-color: var(--bg);
-    --bgCode: #f3f3f3;
+    --bgCode: #c9c9c9;
   }
-  body.dark {
-    -webkit-font-smoothing: antialiased;
+  body.dark-mode {
+
     --bg: #111;
     --textNormal: #d86a7e;
     --textTitle: white;
     --textLink: azure;
     --hr: #d86a7e;
-    --bgCode: #272727;
+    --bgCode: #3b3b3b;
+    background-color: var(--bg);
+
   }
 
   ::selection {
@@ -224,6 +223,9 @@ html {
     box-sizing: inherit;
   }
   body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
     color: var(--textNormal);
     font-family: sans-serif;
     font-weight: normal;
