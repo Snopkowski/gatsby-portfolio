@@ -9,6 +9,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 
 
+
 const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
