@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import './nav.module.scss'
-import DarkModeToggle from './DarkModeToggle'
+import DarkModeToggle from './dark-mode/DarkModeToggle'
 
 import navStyles from './nav.module.scss';
 
