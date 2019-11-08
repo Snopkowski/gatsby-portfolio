@@ -37,7 +37,7 @@ const IndexPage = () => {
         <p>For the past six years, I’ve been working as an Autoclave Technician. Over time, I’ve come to realize that my true passion is in coding and programming, especially now that the web development industry continues to grow at an exponential rate. Therefore, I’ve decided to transition careers because I trust that my creative skills are likely better suited for the ever-growing web development industry.</p>
         <p>I am confident that I will continue to absorb new skills and technologies while managing my tasks and building my experience. My ultimate goal is to continually learn something new every day while I fine-tune my abilities now that I have fully committed to immersing myself in this field.</p>
         <h3>Tools and technologies I've been using lately:</h3>
-        <p>HTML5 - CSS3 - JAVASCRIPT - SASS - REACT - CSS MODULES - GATSBY - GRAPHQL - GIT - AJAX - NPM - BASH</p>
+        <p>HTML5 - CSS3 - JAVASCRIPT - SASS - STYLED COMPONENTS - FIREBASE - REACT - CSS MODULES - GATSBY - GRAPHQL - GIT - AJAX - NPM - BASH</p>
       </Layout>
     </div>
   )
