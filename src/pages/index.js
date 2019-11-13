@@ -21,7 +21,7 @@ const IndexPage = () => {
           </h1>
           <img src={Hero} alt="coding" />
         </div>
-        <h3>About</h3>
+        <h3>A little bit about me</h3>
         <div className={homepageStyles.container}>
           <img src={About} alt="about" />
           <p>
@@ -34,12 +34,22 @@ const IndexPage = () => {
             that I have fully committed to immersing myself in this field.
           </p>
         </div>
-        <h3>Tools and technologies I've been using lately:</h3>
+        <h3>Tools I've been using</h3>
         <div className={homepageStyles.container}>
-          <p>
-            HTML5 - CSS3 - JAVASCRIPT - SASS - STYLED COMPONENTS - FIREBASE -
-            REACT - CSS MODULES - GATSBY - GRAPHQL - GIT - AJAX - NPM - BASH
-          </p>
+          <ul className={homepageStyles.list}>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Styled Components</li>
+            <li>Gatsby</li>
+            <li>CSS Modules</li>
+            <li>Firebase</li>
+            <li>GraphQL</li>
+            <li>Npm</li>
+            <li>Git</li>
+            <li>Bash</li>
+          </ul>
           <img src={Skills} alt="skills" />
         </div>
       </Layout>
