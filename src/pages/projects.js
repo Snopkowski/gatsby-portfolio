@@ -36,7 +36,7 @@ const Projects = () => {
   return (
     <Layout>
       <Head title="Projects" />
-      <h1>Projects</h1>
+      <h1>Recent projects</h1>
       <ol className={projectsStyles.items}>
 
       {items.edges.map(item => (
