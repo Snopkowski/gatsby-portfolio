@@ -23,9 +23,10 @@ const IndexPage = () => {
         <div className={homepageStyles.container}>
           <img src={About} alt="about" />
           <p>
-            Looking forward to a much deeper dive into coding and programming.
+            I am looking forward to a much deeper dive into coding and programming.
             I’ve noticed as a self-taught Web Developer, learning about this
-            field has a tremendous momentum to it. I am determined to contribute
+            field has a tremendous momentum to it. 
+            I am determined to contribute
             to this momentum, especially since I am now pursuing my passion to
             become a professional developer. My ultimate goal is to continually
             learn something new every day while I fine-tune my abilities now

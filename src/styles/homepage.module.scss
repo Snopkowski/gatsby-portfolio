@@ -6,6 +6,10 @@
   padding-bottom: 10vh;
   place-items: center;
 
+  & > p {
+    text-align: justify;
+  }
+
   @media (max-width: 768px){
     grid-template-columns: 1fr;
 
