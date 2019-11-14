@@ -17,6 +17,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.11.1",
     "@fortawesome/free-solid-svg-icons": "^5.11.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "babel-plugin-styled-components": "^1.10.6",
     "eslint-plugin-flowtype": "^4.3.0",
     "gatsby": "^2.15.18",
     "gatsby-image": "^2.2.19",
@@ -29,6 +30,7 @@
     "gatsby-plugin-sass": "^2.1.14",
     "gatsby-plugin-sharp": "^2.2.24",
     "gatsby-plugin-sitemap": "^2.2.13",
+    "gatsby-plugin-styled-components": "^3.1.12",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^3.1.22",
     "gatsby-remark-lazy-load": "^1.0.2",
@@ -41,6 +43,7 @@
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "styled-components": "^4.4.1",
     "typography": "^0.16.19",
     "use-dark-mode": "^2.3.1"
   },

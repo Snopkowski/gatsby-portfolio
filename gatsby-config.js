@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: "Snopkowski.com",
     author: "Wojciech Snopkowski",
-    description: "I'm Wojciech, a Front-End Developer based in Birmingham, UK.",
+    description: "I'm Wojciech Snopkowski, a Front-End Developer based in Birmingham, UK.",
     siteUrl: "https://snopkowski.com",
     keywords: 'web developer, developer, birmingham, west midlands, javascript, website, wojciech snopkowski, snopkowski'
   },
@@ -26,6 +26,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sharp",
     "gatsby-transformer-remark",
+    `gatsby-plugin-styled-components`,
     
     {
       resolve: "gatsby-transformer-remark",

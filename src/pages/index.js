@@ -1,26 +1,56 @@
 import React from "react"
 import Head from "../components/head"
 import Layout from "../components/layout"
-import indexStyles from "../styles/index.scss"
-import homepageStyles from "../styles/homepage.module.scss"
 import Hero from "../images/coding.svg"
 import About from "../images/about.svg"
 import Skills from "../images/skills.svg"
+import styled from 'styled-components'
 
 const IndexPage = () => {
+
+  const TwoColumnGrid = styled.section`
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 2rem;
+  padding-bottom: 10vh;
+  place-items: center;
+
+  > p {
+    text-align: justify;
+  }
+  @media (max-width: 768px){
+    grid-template-columns: 1fr;
+
+    & img{
+      width: 80%;
+    }
+  }
+  `
+
+  const SkillsList = styled.ul`
+     display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+  margin: 0;
+  white-space: nowrap;
+
+  > li{
+    list-style: none;
+  }
+  `
   return (
-    <div>
       <Layout>
         <Head title="Home" />
-        <div className={homepageStyles.container}>
-          <h1 className={indexStyles.mainHeading}>
+        <TwoColumnGrid>
+          <h1>
             Hello, my name is Wojciech. I'm a Web Developer based in Birmingham,
             UK.
           </h1>
           <img src={Hero} alt="coding" />
-        </div>
+        </TwoColumnGrid>
         <h3>A little bit about me</h3>
-        <div className={homepageStyles.container}>
+        <TwoColumnGrid>
           <img src={About} alt="about" />
           <p>
             I am looking forward to a much deeper dive into coding and programming.
@@ -32,10 +62,10 @@ const IndexPage = () => {
             learn something new every day while I fine-tune my abilities now
             that I have fully committed to immersing myself in this field.
           </p>
-        </div>
+        </TwoColumnGrid>
         <h3>Tools I've been using</h3>
-        <div className={homepageStyles.container}>
-          <ul className={homepageStyles.list}>
+        <TwoColumnGrid>
+          <SkillsList>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
@@ -48,11 +78,10 @@ const IndexPage = () => {
             <li>Npm</li>
             <li>Git</li>
             <li>Bash</li>
-          </ul>
+          </SkillsList>
           <img src={Skills} alt="skills" />
-        </div>
+        </TwoColumnGrid>
       </Layout>
-    </div>
   )
 }
 export default IndexPage

@@ -3,12 +3,16 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import { useStaticQuery, graphql } from "gatsby"
 import PortfolioItem from "../templates/portfolioItem"
-import projectsStyles from '../styles/projects.module.scss'
+import styled from "styled-components"
+import { ExtLink} from '../components/common'
 
 const Projects = () => {
   const { allMarkdownRemark: items } = useStaticQuery(graphql`
     query {
-      allMarkdownRemark (filter: {frontmatter: {type: {eq: "project"}}}, sort: {fields: frontmatter___order}) { 
+      allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "project" } } }
+        sort: { fields: frontmatter___order }
+      ) {
         edges {
           node {
             frontmatter {
@@ -20,32 +24,46 @@ const Projects = () => {
               image {
                 childImageSharp {
                   fluid(maxWidth: 800, quality: 80) {
-                    ...GatsbyImageSharpFluid_tracedSVG
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
-          }
-        }
-            }
-            
           }
         }
       }
     }
-    
   `)
+
+  const ProjectsList = styled.ol`
+    list-style: none;
+    margin: 0;
+  `
+  const ProjectsListItem = styled.li`
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--textNormal);
+    margin-bottom: 2rem;
+
+    :last-child {
+      border-bottom: none;
+    }
+  `
 
   return (
     <Layout>
       <Head title="Projects" />
       <h1>Recent projects</h1>
-      <ol className={projectsStyles.items}>
-
-      {items.edges.map(item => (
-        <li className={projectsStyles.item}>
-          <PortfolioItem portfolio={item.node} />
-        </li>
+      <ProjectsList>
+        {items.edges.map(item => (
+          <ProjectsListItem>
+            <PortfolioItem portfolio={item.node} />
+          </ProjectsListItem>
         ))}
-      </ol>
-      <h3>See more at: <a href="https://github.com/Snopkowski/">github.com/Snopkowski/</a></h3>
+      </ProjectsList>
+      <h3>
+        See more at:{" "}
+        <ExtLink href="https://github.com/Snopkowski/">github.com/Snopkowski/</ExtLink>
+      </h3>
     </Layout>
   )
 }

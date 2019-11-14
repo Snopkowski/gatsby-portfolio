@@ -1,31 +1,43 @@
 import React from "react"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import Head from '../components/head'
-import postStyles from '../styles/blogItem.module.scss'
+import Head from "../components/head"
+import styled from 'styled-components'
 
 export const query = graphql`
-query($slug: String!) {
-  markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-    frontmatter {
-      title
-      slug
-      date
-      description
-      keywords
+  query($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        slug
+        date
+        description
+        keywords
+      }
+      html
+      timeToRead
     }
-    html
-    timeToRead
   }
-}
 `
-const Blog = ({data})=> {
+
+const Blog = ({ data }) => {
+  const BlogItem = styled.p`
+    font-size: 0.7rem;
+    padding-bottom: 2rem;
+  `
+
   const post = data.markdownRemark
   return (
     <Layout>
-      <Head title={post.frontmatter.title} description={post.frontmatter.description} keywords={post.frontmatter.keywords}/>
+      <Head
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        keywords={post.frontmatter.keywords}
+      />
       <h1>{post.frontmatter.title}</h1>
-      <p className={postStyles.dateAndTime} >{post.frontmatter.date} | {post.timeToRead} min read</p>
+      <BlogItem>
+        {post.frontmatter.date} | {post.timeToRead} min read
+      </BlogItem>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
