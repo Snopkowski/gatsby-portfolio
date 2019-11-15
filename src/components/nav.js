@@ -32,6 +32,9 @@ const Nav = () => {
         flex-direction: row;
         margin-bottom: 0;
       }
+      > li {
+          color
+      }
     }
   `
 
