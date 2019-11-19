@@ -55,7 +55,7 @@ const BlogPage = () => {
             return (
               <BlogItem>
                 <Link to={`/blog/${edge.node.frontmatter.slug}`}>
-                  <h2>{edge.node.frontmatter.title}</h2>
+                  <h2>{edge.node.frontmatter.title} &#8594;</h2>
                   <p>
                     {edge.node.frontmatter.date} | {edge.node.timeToRead} min
                     read

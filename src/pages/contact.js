@@ -2,7 +2,7 @@ import React from "react"
 import Head from "../components/head"
 import Layout from "../components/layout"
 import styled from "styled-components"
-import {ExtLink} from '../components/common'
+import {ExtLink, Button} from '../components/common'
 
 const Contact = () => {
   const Form = styled.form`
@@ -23,14 +23,6 @@ const Contact = () => {
       color: var(--textNormal);
     }
 
-    > button {
-      background-color: var(--textNormal);
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
   `
   return (
     <div>
@@ -58,7 +50,7 @@ const Contact = () => {
           <input type="email" id="email" name="email" required />
           <label htmlFor="message">Message:</label>
           <textarea name="message" id="message" type="text" rows="6" required />
-          <button type="submit">Send</button>
+          <Button type="submit">Send</Button>
         </Form>
       </Layout>
     </div>

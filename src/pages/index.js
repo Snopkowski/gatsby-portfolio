@@ -5,6 +5,8 @@ import Hero from "../images/coding.svg"
 import About from "../images/about.svg"
 import Skills from "../images/skills.svg"
 import styled from 'styled-components'
+import { Button } from "../components/common"
+import {Link} from 'gatsby'
 
 const IndexPage = () => {
 
@@ -52,6 +54,7 @@ const IndexPage = () => {
         <h3>A little bit about me</h3>
         <TwoColumnGrid>
           <img src={About} alt="about" />
+          <div>
           <p>
             I am looking forward to a much deeper dive into coding and programming.
             I’ve noticed as a self-taught Web Developer, learning about this
@@ -62,22 +65,24 @@ const IndexPage = () => {
             learn something new every day while I fine-tune my abilities now
             that I have fully committed to immersing myself in this field.
           </p>
+          <Link to='/contact'><Button>Hire me</Button></Link>
+          </div>
         </TwoColumnGrid>
         <h3>Tools I've been using</h3>
         <TwoColumnGrid>
           <SkillsList>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Styled Components</li>
-            <li>Gatsby</li>
-            <li>CSS Modules</li>
-            <li>Firebase</li>
-            <li>GraphQL</li>
-            <li>Npm</li>
-            <li>Git</li>
-            <li>Bash</li>
+            <li>&#10003; HTML</li>
+            <li>&#10003; CSS</li>
+            <li>&#10003; JavaScript</li>
+            <li>&#10003; React</li>
+            <li>&#10003; Styled Components</li>
+            <li>&#10003; Gatsby</li>
+            <li>&#10003; CSS Modules</li>
+            <li>&#10003; Firebase</li>
+            <li>&#10003; GraphQL</li>
+            <li>&#10003; Npm</li>
+            <li>&#10003; Git</li>
+            <li>&#10003; Bash</li>
           </SkillsList>
           <img src={Skills} alt="skills" />
         </TwoColumnGrid>

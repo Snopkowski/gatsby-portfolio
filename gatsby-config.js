@@ -27,6 +27,15 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-remark",
     `gatsby-plugin-styled-components`,
+    {
+      resolve: 'gatsby-plugin-page-progress',
+      options: {
+        height: 3,
+        prependToBody: false,
+        excludePaths: ['/contact', '/blog'],
+        color: `#d86a7e`,
+      }
+    },
     
     {
       resolve: "gatsby-transformer-remark",

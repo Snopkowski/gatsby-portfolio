@@ -88,4 +88,5 @@ I wanted to get a better grasp of what markdown language is, how to use it effec
 I got to admit that I enjoyed the development process using Gatsby. I'm glad that I made this choice for a project like a portfolio website - I would choose it again.
 By all means, I don't consider myself a highly proficient using it, but I have to note that Gatsby has incredible [documentation](https://www.gatsbyjs.org/docs/) and [tutorials](https://www.gatsbyjs.org/tutorial/) to get you up and running fairly quickly. I'm looking forward to building more project using it.
 
+## Final Result
 ![Portfolio audit](images/audit.png)

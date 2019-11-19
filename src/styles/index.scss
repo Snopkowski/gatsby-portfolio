@@ -11,6 +11,7 @@ html {
     --textNormal: #222;
     --textTitle: #222;
     --textLink: #d86a7e;
+    --accent: #404040;
     --hr: hsla(0, 0%, 0%, 0.2);
     background-color: var(--bg);
     --bgCode: #cccccc;
@@ -21,6 +22,7 @@ html {
     --textNormal: #d86a7e;
     --textTitle: white;
     --textLink: azure;
+    --accent: #cf4961;
     --hr: #d86a7e;
     --bgCode: #3b3b3b;
     background-color: var(--bg);
@@ -71,6 +73,7 @@ html {
   a:hover {
     outline-width: 0;
     color: var(--textLink);
+    text-decoration: none;
   }
   abbr[title] {
     border-bottom: none;

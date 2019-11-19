@@ -10,6 +10,7 @@ const Toggle = ({ checked, onChange }) => (
       checked={checked}
       onChange={onChange}
       id="dmcheck"
+      aria-label="Toggle darkmode"
     />
     <label htmlFor="dmcheck" />
   </span>

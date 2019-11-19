@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import {ExtLink} from '../components/common'
+import { Button} from '../components/common'
 
 const PortfolioItem = ({ portfolio }) => {
   const {
@@ -13,13 +13,12 @@ const PortfolioItem = ({ portfolio }) => {
     description,
   } = portfolio.frontmatter
 
+  const InlineButton = styled(Button)`
+  display: inline-block;
+  margin-right: 2rem;
+  `
+
   const PortfolioItemWrap = styled.div`
-    > a {
-      margin: 1rem 1rem 1rem 0;
-      border: 2px solid var(--textNormal);
-      border-radius: 8px;
-      padding: 0.3rem 0.8rem;
-    }
     > h3 {
         margin-top: 1rem;
     }
@@ -33,8 +32,8 @@ const PortfolioItem = ({ portfolio }) => {
       <h2>{title}</h2>
       <Img fluid={image.childImageSharp.fluid} />
       <h3>{stack}</h3>
-      <ExtLink href={live}>Live</ExtLink>
-      <ExtLink href={source}>Code</ExtLink>
+      <a href={live}><InlineButton>Live</InlineButton></a>
+      <a href={source}><InlineButton>Code</InlineButton></a>
       <p>{description}</p>
     </PortfolioItemWrap>
   )
