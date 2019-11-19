@@ -15,7 +15,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: `/thanks`,
+      }
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

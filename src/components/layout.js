@@ -2,17 +2,34 @@ import React from "react"
 import Nav from "./nav"
 import Footer from "./footer"
 import "../styles/index.scss"
-import layoutStyles from "./layout.module.scss"
+import styled from "styled-components"
 
 const Layout = props => {
+  const MainWrapper = styled.div`
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--textNormal);
+    flex-grow: 1;
+
+    > div {
+      flex-grow: 1;
+    }
+  `
+
+ 
   return (
-    <div className={layoutStyles.container}>
-      <div className={layoutStyles.content}>
-        <Nav/>
+    <MainWrapper>
+      <div>
+        <Nav />
         {props.children}
       </div>
       <Footer />
-    </div>
+    </MainWrapper>
   )
 }
 
