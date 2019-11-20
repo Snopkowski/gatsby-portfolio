@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { ButtonSmall} from '../components/common'
+import {Button} from '../components/common'
 
 const PortfolioItem = ({ portfolio }) => {
   const {
@@ -27,8 +27,8 @@ const PortfolioItem = ({ portfolio }) => {
       <h2>{title}</h2>
       <Img fluid={image.childImageSharp.fluid} />
       <h3>{stack}</h3>
-      <a href={live}><ButtonSmall>Live</ButtonSmall></a>
-      <a href={source}><ButtonSmall>Code</ButtonSmall></a>
+      <a href={live}><Button small>Live</Button></a>
+      <a href={source}><Button small>Code</Button></a>
       <p>{description}</p>
     </PortfolioItemWrap>
   )
