@@ -1,10 +1,16 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
+
 module.exports = {
   siteMetadata: {
     title: "Snopkowski.com",
     author: "Wojciech Snopkowski",
     description: "I'm Wojciech Snopkowski, a Front-End Developer based in Birmingham, UK.",
     siteUrl: "https://snopkowski.com",
-    keywords: 'web developer, developer, birmingham, west midlands, javascript, website, wojciech snopkowski, snopkowski, gatsby, react'
+    keywords: 'web developer, developer, birmingham, west midlands, javascript, website, wojciech snopkowski, snopkowski'
   },
   plugins: [
     `gatsby-plugin-netlify`,
