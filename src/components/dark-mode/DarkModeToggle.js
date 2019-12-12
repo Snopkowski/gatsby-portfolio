@@ -1,16 +1,19 @@
 import React from 'react';
-
 import Toggle from './Toggle';
 import useDarkMode from 'use-dark-mode';
-import ToggleStyles from './Toggle.module.scss'
+import styled from '@emotion/styled'
 
 const DarkModeToggle = () => {
   const darkMode = useDarkMode(false);
 
+  const DMToggle = styled.div`
+    display: flex;
+  `
+
   return (
-    <div className={ToggleStyles.darkModeToggle}>
+    <DMToggle>
       <Toggle checked={darkMode.value} onChange={darkMode.toggle} />
-    </div>
+    </DMToggle>
   );
 };
 
