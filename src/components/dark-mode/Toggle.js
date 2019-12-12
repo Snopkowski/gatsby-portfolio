@@ -1,57 +1,65 @@
 import React from "react"
 import styled from "@emotion/styled"
+import useDarkMode from 'use-dark-mode';
 
-const Toggle = ({ checked, onChange }) => {
-  const ToggleControl = styled.span`
+const Toggle = () => {
+  const darkMode = useDarkMode(false);
+  const CheckboxWrapper = styled.span`
     position: relative;
-    padding: 0 0.2rem;
     display: flex;
     align-items: center;
     border: none;
   `
-
-  const DMcheck = styled.input`
-    width: 2.5rem;
-    height: 0.5rem;
+  const CheckboxLabel = styled.label`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 16px;
+    border-radius: 15px;
     background: var(--bgCode);
-    position: relative;
-    border-radius: 5px;
-    appearance: none;
     cursor: pointer;
-    outline: none;
-    transition: all 0.3s forwards;
-
-    & :checked + label {
-      left: 30px;
-    }
-
-    & :focus-visible {
-      outline: solid 2px white;
-    }
-
-    & + label {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
+    &::after {
+      content: "";
+      display: block;
       border-radius: 50%;
-      cursor: pointer;
-      position: absolute;
-      left: 2px;
-      background-color: var(--textNormal);
+      width: 12px;
+      height: 12px;
+      margin: 2px;
+      background: var(--textNormal);
+      box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
+    }
+
+  `
+  const Checkbox = styled.input`
+    opacity: 0;
+    z-index: 1;
+    border-radius: 15px;
+    width: 48px;
+    height: 16px;
+    &:checked + ${CheckboxLabel} {
+      &::after {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        margin-left: 33px;
+      }
     }
   `
 
   return (
-    <ToggleControl>
-      <DMcheck
+    <CheckboxWrapper>
+      <Checkbox
         type="checkbox"
-        checked={checked}
-        onChange={onChange}
+        checked={darkMode.value}
+        onChange={darkMode.toggle}
         id="dmcheck"
         aria-label="Toggle darkmode"
       />
-      <label htmlFor="dmcheck" />
-    </ToggleControl>
+      <CheckboxLabel htmlFor="dmcheck" />
+    </CheckboxWrapper>
   )
 }
 

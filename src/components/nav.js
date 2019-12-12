@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import DarkModeToggle from "./dark-mode/DarkModeToggle"
+import Toggle from "./dark-mode/Toggle"
 import styled from "@emotion/styled"
 import {StyledLink} from './common'
 
@@ -57,7 +57,7 @@ const Nav = () => {
             <StyledLink to="/contact">Contact</StyledLink>
           </li>
         </ul>
-        <DarkModeToggle />
+        <Toggle />
       </nav>
     </Header>
   )
