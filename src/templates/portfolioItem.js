@@ -1,12 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
-<<<<<<< HEAD
 import styled from "@emotion/styled"
-import {Button} from '../components/common'
-=======
-import styled from "styled-components"
-import { ButtonSmall} from '../components/common'
->>>>>>> parent of bb6a909... minor styling
+import {ButtonSmall} from '../components/common'
 
 const PortfolioItem = ({ portfolio }) => {
   const {

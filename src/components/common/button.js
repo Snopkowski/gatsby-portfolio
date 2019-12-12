@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import styled from "@emotion/styled"
-import {css} from "@emotion/core"
-=======
-import styled from "styled-components"
->>>>>>> parent of bb6a909... minor styling
 
 export const Button = styled.button`
   background: var(--textNormal);
