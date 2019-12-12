@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Hero from "../images/coding.svg"
 import About from "../images/about.svg"
 import Skills from "../images/skills.svg"
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { Button } from "../components/common"
 import {Link} from 'gatsby'
 

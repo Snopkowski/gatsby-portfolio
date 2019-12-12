@@ -2,7 +2,7 @@ import React from "react"
 import Nav from "./nav"
 import Footer from "./footer"
 import "../styles/index.scss"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const Layout = props => {
   const MainWrapper = styled.div`

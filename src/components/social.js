@@ -3,7 +3,7 @@ import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import {faGithub, faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
 import {StyledLink} from './common'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 
 const Social = () => {

@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Head from "../components/head"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 
 const BlogPage = () => {

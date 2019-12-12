@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import { useStaticQuery, graphql } from "gatsby"
 import PortfolioItem from "../templates/portfolioItem"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { ExtLink} from '../components/common'
 
 const Projects = () => {

@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import {Button} from '../components/common'
 
 const PortfolioItem = ({ portfolio }) => {

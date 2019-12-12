@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Social from "./social"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`

@@ -1,7 +1,7 @@
 import React from "react"
 import Head from "../components/head"
 import Layout from "../components/layout"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import {ExtLink, Button} from '../components/common'
 
 const Contact = () => {

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import DarkModeToggle from "./dark-mode/DarkModeToggle"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import {StyledLink} from './common'
 
 const Nav = () => {
