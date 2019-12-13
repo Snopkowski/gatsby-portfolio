@@ -7,8 +7,8 @@ import styled from "@emotion/styled"
 const Layout = props => {
   const MainWrapper = styled.div`
     margin: 0 auto;
-    max-width: 900px;
     padding: 1rem;
+    max-width: 900px;
 
     display: flex;
     flex-direction: column;

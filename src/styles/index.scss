@@ -7,7 +7,7 @@ html {
     
   }
   body.light-mode {
-    --bg: #f0f0f0;
+    --bg: #e2e2e2;
     --textNormal: #222;
     --textTitle: #222;
     --textLink: #d86a7e;
@@ -21,7 +21,7 @@ html {
     --bg: #111;
     --textNormal: #d86a7e;
     --textTitle: white;
-    --textLink: azure;
+    --textLink: #e9e9e9;
     --accent: #cf4961;
     --hr: #d86a7e;
     --bgCode: #3b3b3b;
@@ -30,7 +30,7 @@ html {
   }
 
   ::selection {
-    background-color: var(--textLink);
+    background: var(--textLink);
     color: var(--textNormal);
   }
   article,
@@ -239,6 +239,7 @@ html {
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
+    transition: all 0.3s;
 
   }
   

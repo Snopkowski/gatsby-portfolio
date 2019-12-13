@@ -31,7 +31,13 @@ const Nav = () => {
         width: 100%;
         flex-direction: row;
         margin-bottom: 0;
+        align-items: center;
+
+        & li {
+          line-height: 100%;
+        }
       }
+
       
     }
   `
@@ -54,7 +60,7 @@ const Nav = () => {
             <StyledLink to="/blog">Blog</StyledLink>
           </li>
           <li>
-            <StyledLink to="/contact">Contact</StyledLink>
+            <StyledLink  to="/contact">Contact</StyledLink>
           </li>
         </ul>
         <Toggle />

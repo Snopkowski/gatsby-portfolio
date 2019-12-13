@@ -1,8 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Head from "../components/head"
 import styled from "@emotion/styled"
+import {StyledLink} from '../components/common'
 
 
 const BlogPage = () => {
@@ -45,6 +46,8 @@ const BlogPage = () => {
 
     `
 
+    
+
   return (
     <div>
       <Layout>
@@ -54,13 +57,13 @@ const BlogPage = () => {
           {data.allMarkdownRemark.edges.map(edge => {
             return (
               <BlogItem>
-                <Link to={`/blog/${edge.node.frontmatter.slug}`}>
+                <StyledLink to={`/blog/${edge.node.frontmatter.slug}`}>
                   <h2>{edge.node.frontmatter.title} &#8594;</h2>
                   <p>
                     {edge.node.frontmatter.date} | {edge.node.timeToRead} min
                     read
                   </p>
-                </Link>
+                </StyledLink>
               </BlogItem>
             )
           })}

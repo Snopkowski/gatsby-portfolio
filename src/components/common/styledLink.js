@@ -8,4 +8,12 @@ export const StyledLink = styled(Link)`
   margin-top: 0.6rem;
   flex-wrap: nowrap;
   color: var(--textNormal);
+  transition: color .4s ease;
+
+  &:hover {
+    color: var(--textLink);
+  }
+
+  
+
 `

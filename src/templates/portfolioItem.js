@@ -14,6 +14,7 @@ const PortfolioItem = ({ portfolio }) => {
   } = portfolio.frontmatter
 
   const PortfolioItemWrap = styled.div`
+
     > h3 {
         margin-top: 1rem;
     }

@@ -7,6 +7,8 @@ import Skills from "../images/skills.svg"
 import styled from '@emotion/styled'
 import { Button } from "../components/common"
 import {Link} from 'gatsby'
+import LatestBlog from "../components/latestBlog"
+
 
 const IndexPage = () => {
 
@@ -65,9 +67,10 @@ const IndexPage = () => {
             learn something new every day while I fine-tune my abilities now
             that I have fully committed to immersing myself in this field.
           </p>
-          <Link to='/contact'><Button>Hire me</Button></Link>
+          <Link to='/contact'><Button>Contact me</Button></Link>
           </div>
         </TwoColumnGrid>
+        <LatestBlog />
         <h3>Tools I've been using</h3>
         <TwoColumnGrid>
           <SkillsList>
