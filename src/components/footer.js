@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <FooterWrap>
       <Social />
-      <p>Made by {data.site.siteMetadata.author}, &copy; 2019</p>
+      <p>Made by {data.site.siteMetadata.author}, &copy; {new Date().getFullYear()}</p>
     </FooterWrap>
   )
 }

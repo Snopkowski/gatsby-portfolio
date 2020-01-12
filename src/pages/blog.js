@@ -9,7 +9,7 @@ import {StyledLink} from '../components/common'
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: { frontmatter: { type: { eq: "blog" } } }) {
+      allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog"}}}, sort: {fields: frontmatter___date}) {
         edges {
           node {
             frontmatter {

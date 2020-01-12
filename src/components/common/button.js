@@ -10,6 +10,7 @@ export const Button = styled.button`
   cursor: pointer;
   display: block;
   margin: 0 auto;
+  font-weight: bold;
 
   :hover {
       animation: stripes-move 20s infinite linear;

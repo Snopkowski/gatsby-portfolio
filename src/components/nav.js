@@ -17,7 +17,7 @@ const Nav = () => {
 
   const Header = styled.header`
     padding-top: 1rem 0 3rem;
-
+  
     > nav {
       display: flex;
       justify-content: space-around;

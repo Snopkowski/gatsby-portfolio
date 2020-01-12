@@ -9,6 +9,7 @@ export const ButtonSmall = styled.button`
   border-radius: 4px;
   cursor: pointer;
   margin-right: 1rem;
+  font-weight: bold;
 
   :hover, :focus {
       animation: stripes-move 20s infinite linear;

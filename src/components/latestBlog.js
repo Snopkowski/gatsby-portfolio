@@ -1,7 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
-import { StyledLink } from "./common"
+import { StyledLink, Button } from "./common"
+
 
 const LatestBlog = () => {
   const data = useStaticQuery(graphql`
@@ -16,7 +17,6 @@ const LatestBlog = () => {
             frontmatter {
               title
               slug
-              description
             }
           }
         }
@@ -25,11 +25,11 @@ const LatestBlog = () => {
   `)
 
   const LatestBlogWrapper = styled.div`
-    min-height: 20vh;
+    min-height: 30vh;
     display: flex;
     place-items: center;
     place-content: center;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
     position: relative;
 
     &::before,
@@ -70,7 +70,7 @@ const LatestBlog = () => {
           Latest blog post &#10230;{" "}
           {data.allMarkdownRemark.edges[0].node.frontmatter.title}
         </h3>
-        <p>{data.allMarkdownRemark.edges[0].node.frontmatter.description}</p>
+        <Button>Read More</Button>
       </StyledLink>
     </LatestBlogWrapper>
   )

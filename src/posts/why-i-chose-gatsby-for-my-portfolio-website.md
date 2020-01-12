@@ -60,7 +60,7 @@ To do this I set up my content model, installed **`gatsby-source-contentful`**. 
 
 #### Rich text and optimizing images
 To add blog posts that have a different structure from one another, I used a **`gatsby-transformer-contentful-richtext`**. Optimizing images using **`gatsby-remark-images`** has become impossible due to the fact the GraphQL query should look like this example below:
-```
+```js
 {
   allContentfulBlogPost {
     bodyRichText {
@@ -72,6 +72,7 @@ To add blog posts that have a different structure from one another, I used a **`
 }
 ```
 [More details regarding image optimization using contentful](https://github.com/gatsbyjs/gatsby/issues/14338).
+
 
 #### ENV variables and gatsby-source-contentful
 For some reason unclear to myself back then, I wasn't able to set up **environment variables** properly on my local machine. Netlify had it covered hassle-free. Finally, I stumbled upon [this blog post by Kyle Shevlin](https://kyleshevlin.com/firebase-and-gatsby-together-at-last) providing a solid explanation to my problem.

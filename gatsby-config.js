@@ -43,6 +43,9 @@ module.exports = {
         plugins: [
           "gatsby-remark-relative-images",
           `gatsby-remark-lazy-load`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-vscode`,
+          `gatsby-remark-responsive-iframe`,
           {
             resolve: 'gatsby-remark-external-links',
             options: {
@@ -59,7 +62,7 @@ module.exports = {
         ],
       },
     },
-    
+  
     {
       resolve: 'gatsby-source-filesystem',
       options: {
