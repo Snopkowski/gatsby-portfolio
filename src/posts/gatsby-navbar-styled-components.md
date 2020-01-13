@@ -7,7 +7,7 @@ description: 'Gatsby responsive navigation using Styled Components and useState 
 keywords: 'gatsby, react, navigation, navbar, styled components, usestate, hooks, tutorial, guide'
 ---
 
-![Gatsby-navigation](images/Gatsby-nav.gif)
+![Gatsby-navigation](images/gatsby-navbar/Gatsby-nav.gif)
 
 In this walkthrough, I'll guide you through the steps of building a simple navigation bar with [GatsbyJS](https://gatsbyjs.org). We'll use [Styled Components](https://https://www.styled-components.com) to style our application.
 
@@ -38,7 +38,7 @@ Begin with creating a new project, we'll call it **gatsby-navigation** and use a
 gatsby new gatsby-navigation https://github.com/gatsbyjs/gatsby-starter-default
 ```
 
-![gatsby-installation](images/gatsby-installation.png)
+![gatsby-installation](images/gatsby-navbar/gatsby-installation.png)
 
 It's time to navigate into the new site directory and start it up.
 ```
@@ -59,7 +59,7 @@ gatsby develop
 ```
 Let's start by creating a directory named **Navbar** with **Logo.js**, **Navbar.js** and **NavbarLinks.js** inside.
 
-![src-folder](/images/source-folder.png)
+![src-folder](images/gatsby-navbar/source-folder.png)
 
 ### Logo
 Almost every navigation needs a logo so we'll use **GraphQL** with **gatsby-image** to grab our logo from images folder.
@@ -170,7 +170,7 @@ export default Navbar
 ## You've got it! 
 Congratulations! By this time our application should look extraordinarily bad, but the guts are already in place...
 
-![celebrate](images/celebrate.jpg)
+![celebrate](images/gatsby-navbar/celebrate.jpg)
 
 ## Let's add some styling
 Aside from making it responsive, it is time to use the good stuff that comes with Styled components.
@@ -186,7 +186,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 const LogoWrap = styled.div`
   margin: auto 0;
-  flex: 0 1 40px;
+  flex: 0 1 36px;
 
   @media (max-width: 768px) and (orientation: landscape) {
     flex: 0 1 25px;
@@ -343,7 +343,7 @@ const Hamburger = styled.div`
   background-color: #111;
   width: 30px;
   height: 3px;
-  transition: all 0.3s ease;
+  transition: all .3s linear;
   align-self: center;
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
@@ -355,16 +355,18 @@ const Hamburger = styled.div`
     background-color: #111;
     content: "";
     position: absolute;
+    transition: all 0.3s linear;
   }
 
   ::before {
     transform: ${props =>
-      props.open ? "rotate(-90deg) translate(-10px, 0px)" : "inherit"};
+      props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
     top: -10px;
   }
 
   ::after {
     opacity: ${props => (props.open ? "0" : "1")};
+    transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
     top: 10px;
   }
 `
@@ -394,6 +396,7 @@ const Navbar = () => {
 }
 
 export default Navbar
+
 
 ```
 
