@@ -13,12 +13,13 @@ import LatestBlog from "../components/latestBlog"
 const IndexPage = () => {
 
   const TwoColumnGrid = styled.section`
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
   padding-bottom: 10vh;
   place-items: center;
+  padding: 5vh 0;
 
   > p {
     text-align: justify;
@@ -36,7 +37,7 @@ const IndexPage = () => {
      display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 3rem;
-  margin: 0;
+  /* margin: 0; */
   white-space: nowrap;
 
   > li{

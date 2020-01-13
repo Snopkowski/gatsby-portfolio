@@ -30,7 +30,7 @@ const Contact = () => {
         <Head title="Contact" />
         <h1>Contact me</h1>
         <p>
-          Please fill out the form below or{" "}
+         Fill out the form below or{" "}
           <ExtLink href="mailto:hello@snopkowski.com">
             {" "}
             drop a message at hello@snopkowski.com

@@ -402,7 +402,9 @@ export default Navbar
 
 ```
 ## Wrapping up
-Combining styled components with useState hook is a modern way of writing React’s code, it’s quite easy to implement and gives our app a clean look.
+Combining styled components with useState hook is a modern way of writing React’s code, it’s quite easy to implement and gives our app a clean look. 
+
+Feel free to share if you found it useful.
 ### Sandbox 
 Here's a convenient way to change some things to suit your style
 <iframe
@@ -413,7 +415,9 @@ Here's a convenient way to change some things to suit your style
      sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
    ></iframe>
 
-## Github and Demo Links 
+## Links 
+**[Read on Medium](https://medium.com/@snopkowski/gatsby-navigation-using-styled-components-and-usestate-hook-d000b3439ab0)**
+
 **[Github repo](https://github.com/Snopkowski/gatsby-navigation)**
 
 **[Live demo](https://gatsby-navigation.netlify.com/)**

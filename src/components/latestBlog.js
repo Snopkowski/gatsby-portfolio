@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
-import { StyledLink, Button } from "./common"
+import { StyledLink } from "./common"
 
 
 const LatestBlog = () => {
@@ -70,7 +70,6 @@ const LatestBlog = () => {
           Latest blog post &#10230;{" "}
           {data.allMarkdownRemark.edges[0].node.frontmatter.title}
         </h3>
-        <Button>Read More</Button>
       </StyledLink>
     </LatestBlogWrapper>
   )
