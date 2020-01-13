@@ -6,5 +6,5 @@ stack: 'REACT - CSS - OpenWeatherMap API - Create React App'
 image: 'weather-app.png'
 type: 'project'
 description: 'Made with React using Create-react-app. Utilizing OpenWeatherMap API.'
-order: '3'
+order: 2'
 ---

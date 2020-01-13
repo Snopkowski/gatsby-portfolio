@@ -2,7 +2,7 @@
 title: 'Gatsby navigation using Styled Components and useState hook'
 slug: 'gatsby-navigation-styled-components'
 type: 'blog'
-date: 'January 10th 2020'
+date: 'January 13th 2020'
 description: 'Gatsby responsive navigation using Styled Components and useState hook - Tutorial / Guide'
 keywords: 'gatsby, react, navigation, navbar, styled components, usestate, hooks, tutorial, guide'
 ---
@@ -14,7 +14,7 @@ In this walkthrough, I'll guide you through the steps of building a simple navig
   **[Live demo](https://gatsby-navigation.netlify.com/)**
 
 ## Motivation
-I was trying to find a very simple responsive Gatsby navigation bar that utilizes Styled components and useState hook but ended up creating my own. I'll be happy if there's at least one person that finds it somewhat useful.
+I was trying to find an extremely simple and responsive Gatsby navigation bar that utilizes Styled components and useState hook but ended up creating my own. I'll be happy if there's at least one person that finds this tutorial somewhat useful.
 
 
 
@@ -32,7 +32,7 @@ npm install -g gatsby-cli
 
 
 ## Installation
-Begin with creating a new project, we'll call it **gatsby-navigation** and use a default starter. 
+Begin with creating a new project, we'll call it **gatsby-navigation** and use a default starter. I intended to change as little as possible inside the starter.
 
 ```
 gatsby new gatsby-navigation https://github.com/gatsbyjs/gatsby-starter-default
@@ -40,20 +40,22 @@ gatsby new gatsby-navigation https://github.com/gatsbyjs/gatsby-starter-default
 
 ![gatsby-installation](images/gatsby-navbar/gatsby-installation.png)
 
-It's time to navigate into the new site directory and start it up.
+It's time to navigate into the new site directory.
 ```
 cd gatsby-navigation
 ```
 
 ### Styled Components
-Styled components is a CSS-in-JS framework enables you to write plain CSS utilising template literals in your components without worrying about name collisions - generates unique class names for styles. Components can be dynamically styled based on props or a theme. You don't have to worry about vendor prefixes. Critical CSS - the bare minimum required to render while loading a page. 
+Styled components is a CSS-in-JS framework enables you to write plain CSS utilizing template literals in your components without worrying about name collisions - meaning, it simply generates unique class names for styles. Components can be dynamically styled based on props or a theme. You don't have to worry about vendor prefixes. Furthermore, takes advantage of Critical CSS technique - ships the bare minimum required to render a page.
 
+Instal in terminal:
 ```
 npm install --save gatsby-plugin-styled-components styled-components babel-plugin-styled-components
 ```
 Don't forget to add `'gatsby-plugin-styled-components'` to plugins array in **gatsby-config.js**
 
 ## Start Building
+Since we've got everything already installed, it's time to start developing our navbar.
 ```
 gatsby develop
 ```
@@ -62,9 +64,9 @@ Let's start by creating a directory named **Navbar** with **Logo.js**, **Navbar.
 ![src-folder](images/gatsby-navbar/source-folder.png)
 
 ### Logo
-Almost every navigation needs a logo so we'll use **GraphQL** with **gatsby-image** to grab our logo from images folder.
+Almost every navigation needs a logo so we'll use **GraphQL** with **gatsby-image** to grab our logo from images directory.
 
-**gatsby-image**  enables us to optimize images without tons of tedious work.
+**gatsby-image** enables us to optimize images without tons of tedious work.
 
 ```js
 // Logo.js
@@ -121,7 +123,7 @@ export default NavbarLinks
 
 ### Navigation Bar 
 
-The component that holds most of the logic of our navbar. We'll use a **conditional (ternary) operator** to switch between props and a **useState hook** to track the state of our navigation.
+The component that holds most of the logic of our navbar. We'll use a **conditional (ternary) operator** to switch between props and a **useState hook** to hold the state of our navigation.
 
 ```js
 // Navbar.js
@@ -173,7 +175,7 @@ Congratulations! By this time our application should look extraordinarily bad, b
 ![celebrate](images/gatsby-navbar/celebrate.jpg)
 
 ## Let's add some styling
-Aside from making it responsive, it is time to use the good stuff that comes with Styled components.
+Aside from making it responsive, it is time to use the good stuff that comes with Styled components. In our case, we'll use props to determine which styles should be active.
 
 #### Final Logo
 We've added a wrapper to enclose our image. You'd most likely use it to take us to our homepage so we'll make treat our wrapper as a link.
@@ -399,7 +401,8 @@ export default Navbar
 
 
 ```
-
+## Wrapping up
+Combining styled components with useState hook is a modern way of writing React’s code, it’s quite easy to implement and gives our app a clean look.
 ### Sandbox 
 Here's a convenient way to change some things to suit your style
 <iframe
