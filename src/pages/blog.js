@@ -51,7 +51,7 @@ const BlogPage = () => {
   return (
     <div>
       <Layout>
-        <Head title="Blog" />
+        <Head title="Blog" description='I write about web developement, Front End JavaScript and anything else that intrests me.'/>
         <h1>Posts</h1>
         <BlogList>
           {data.allMarkdownRemark.edges.map(edge => {

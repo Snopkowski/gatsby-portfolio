@@ -7,7 +7,7 @@ const Thanks = () => {
 
     return (
         <Layout>
-            <Head title='Thank you for ' />
+            <Head title='I got it!' />
             <h1>Thank you for your message</h1>
             <p>I'll respond as soon as possible.</p>
             <p><Link to='/'>Head home</Link></p>

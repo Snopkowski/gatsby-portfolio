@@ -27,7 +27,7 @@ const Contact = () => {
   return (
     <div>
       <Layout>
-        <Head title="Contact" />
+        <Head title="Contact" description='Tell me about your idea' />
         <h1>Contact me</h1>
         <p>
          Fill out the form below or{" "}
