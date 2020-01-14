@@ -1,5 +1,5 @@
 ---
-title: 'Gatsby navigation using Styled Components and useState hook'
+title: 'Gatsby Navigation using Styled Components and useState hook'
 slug: 'gatsby-navigation-styled-components'
 type: 'blog'
 date: 'January 13th 2020'
@@ -21,11 +21,11 @@ I was trying to find an extremely simple and responsive Gatsby navigation bar th
 ### Requirements
 If you've found this tutorial, I assume that you've already got **node** and **gatsby-cli** installed on your machine.
 
-- **node** - check in terminal by typing:
+**node** - check in terminal by typing:
 ```
 node -v
 ```
--  **gatsby-cli** if not, use your terminal to install:
+**gatsby-cli** if not, use your terminal to install:
 ```
 npm install -g gatsby-cli
 ```
@@ -46,9 +46,9 @@ cd gatsby-navigation
 ```
 
 ### Styled Components
-Styled components is a CSS-in-JS framework enables you to write plain CSS utilizing template literals in your components without worrying about name collisions - meaning, it simply generates unique class names for styles. Components can be dynamically styled based on props or a theme. You don't have to worry about vendor prefixes. Furthermore, takes advantage of Critical CSS technique - ships the bare minimum required to render a page.
+Styled components is a CSS-in-JS framework, which enables you to write plain CSS utilizing template literals in your components without worrying about name collisions - meaning, it simply generates unique class names for styles. Components can be dynamically styled based on props or a theme. You don't have to worry about vendor prefixes. Furthermore, it takes advantage of the Critical CSS technique - ships the bare minimum required to render a page.
 
-Instal in terminal:
+Install in terminal:
 ```
 npm install --save gatsby-plugin-styled-components styled-components babel-plugin-styled-components
 ```
@@ -178,7 +178,7 @@ Congratulations! By this time our application should look extraordinarily bad, b
 Aside from making it responsive, it is time to use the good stuff that comes with Styled components. In our case, we'll use props to determine which styles should be active.
 
 #### Final Logo
-We've added a wrapper to enclose our image. You'd most likely use it to take us to our homepage so we'll make treat our wrapper as a link.
+We've added a wrapper to enclose our image. You'd most likely use it to take us to our homepage so we'll make it treat our wrapper as a link.
 ```js
 // Logo.js
 import React from "react"
