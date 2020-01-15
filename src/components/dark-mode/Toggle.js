@@ -9,6 +9,11 @@ const Toggle = () => {
     display: flex;
     align-items: center;
     border: none;
+    margin: 0 1vw;
+
+    @media (max-width: 768px) {
+      margin: 10% 1vh; 
+    }
   `
   const CheckboxLabel = styled.label`
     position: absolute;
