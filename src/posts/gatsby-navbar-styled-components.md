@@ -5,6 +5,7 @@ type: 'blog'
 date: 'January 13th 2020'
 description: 'Gatsby responsive navigation using Styled Components and useState hook - Tutorial / Guide'
 keywords: 'gatsby, react, navigation, navbar, styled components, usestate, hooks, tutorial, guide'
+tags: ['gatsby', 'navigation', 'styled components', 'tutorial']
 ---
 
 ![Gatsby-navigation](images/gatsby-navbar/Gatsby-nav.gif)

@@ -24,7 +24,7 @@ const Toggle = () => {
     border-radius: 15px;
     background: var(--bgCode);
     cursor: pointer;
-    &::after {
+    ::after {
       content: "";
       display: block;
       border-radius: 50%;
@@ -42,7 +42,7 @@ const Toggle = () => {
     border-radius: 15px;
     width: 48px;
     height: 16px;
-    &:checked + ${CheckboxLabel} {
+    :checked + ${CheckboxLabel} {
       &::after {
         content: "";
         display: block;

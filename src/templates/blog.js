@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import Head from "../components/head"
 import styled from '@emotion/styled'
+import {Tag} from '../components/common'
 
 export const query = graphql`
   query($slug: String!) {
@@ -13,6 +14,7 @@ export const query = graphql`
         date
         description
         keywords
+        tags
       }
       html
       timeToRead
@@ -23,7 +25,7 @@ export const query = graphql`
 const Blog = ({ data }) => {
   const BlogItem = styled.p`
     font-size: 0.7rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   `
 
   const post = data.markdownRemark
@@ -37,6 +39,13 @@ const Blog = ({ data }) => {
       <h1>{post.frontmatter.title}</h1>
       <BlogItem>
         {post.frontmatter.date} | {post.timeToRead} min read
+      </BlogItem>
+      <BlogItem>
+      {post.frontmatter.tags.map(tag => {
+        return (
+          <Tag>#{tag}</Tag>
+        )
+      })}
       </BlogItem>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>

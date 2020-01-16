@@ -13,7 +13,7 @@ const Social = () => {
             font-size: 1.5rem;
             margin-right: 1rem;
             color: var(--textNormal);
-            transition: color .4s ease;
+            transition: color .4s;
 
             :hover {
                 color: var(--textLink);

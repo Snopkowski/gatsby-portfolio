@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import { Link } from "gatsby"
 import Toggle from '../dark-mode/Toggle'
 
+
 const NavItem = styled(Link)`
   text-decoration: none;
   display: inline-block;
@@ -32,12 +33,12 @@ const NavItem = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    padding: 20px 0;
-    font-size: 1.5rem;
+    margin: 5% 0;
+    font-size: 1.2rem;
     z-index: 6;
+    text-transform: uppercase;
   }
 `
-
 
 const NavbarLinks = () => {
   return (

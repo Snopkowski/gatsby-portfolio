@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Head from "../components/head"
 import styled from "@emotion/styled"
 import {StyledLink} from '../components/common'
-
+import {Tag} from '../components/common'
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -16,6 +16,7 @@ const BlogPage = () => {
               title
               slug
               date
+              tags
             }
             timeToRead
           }
@@ -30,7 +31,7 @@ const BlogPage = () => {
   `
 
     const BlogItem = styled.li`
-      margin: 1rem 0;
+      margin: 1rem 0 0;
       a{
         display: block;
         padding: 1rem 0;
@@ -43,10 +44,7 @@ const BlogPage = () => {
       p {
         font-size: 0.7rem;
     }
-
     `
-
-    
 
   return (
     <div>
@@ -63,6 +61,11 @@ const BlogPage = () => {
                     {edge.node.frontmatter.date} | {edge.node.timeToRead} min
                     read
                   </p>
+                  {edge.node.frontmatter.tags.map(tag => {
+                    return(
+                    <Tag>#{tag}</Tag>
+                    )
+                  })}
                 </StyledLink>
               </BlogItem>
             )

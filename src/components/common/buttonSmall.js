@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ButtonSmall = styled.button`
   background: var(--textNormal);
-  color: var(--textLink);
+  color: var(--bg);
   width: 7rem;
   height: 2rem;
   border: 2px solid transparent;

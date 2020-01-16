@@ -1,7 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
-import { StyledLink } from "./common"
+import { StyledLink, Tag } from "./common"
+
 
 
 const LatestBlog = () => {
@@ -17,6 +18,7 @@ const LatestBlog = () => {
             frontmatter {
               title
               slug
+              tags
             }
           }
         }
@@ -31,9 +33,25 @@ const LatestBlog = () => {
     place-content: center;
     margin-bottom: 10vh;
     position: relative;
+    transition: transform 0.3s;
 
-    &::before,
-    &::after {
+    p:first-child {
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+
+    :hover {
+      transform: scale(1.05);
+
+      @media (max-width: 768px) {
+        transform: none;
+      }
+    }
+
+    ::before,
+    ::after {
       position: absolute;
       top: 0;
       content: "";
@@ -44,32 +62,37 @@ const LatestBlog = () => {
       width: 0;
     }
 
-    &::before {
+    ::before {
       top: 0;
       right: 0;
     }
 
-    &::after {
+    ::after {
       top: 100%;
       left: 0;
     }
 
-    &:hover::before,
-    &:hover::after,
-    &:active::before,
-    &:active::after {
+    :hover::before,
+    :hover::after,
+    :active::before,
+    :active::after {
       width: 100%;
     }
   `
+  const latestBlog = data.allMarkdownRemark.edges[0].node.frontmatter
   return (
     <LatestBlogWrapper>
       <StyledLink
-        to={`/blog/${data.allMarkdownRemark.edges[0].node.frontmatter.slug}`}
+        to={`/blog/${latestBlog.slug}`}
       >
-        <h3>
-          Latest blog post &#10230;{" "}
-          {data.allMarkdownRemark.edges[0].node.frontmatter.title}
-        </h3>
+        <p>Latest Blog Post</p>
+        <h3>{latestBlog.title}</h3>
+        {latestBlog.tags.map(tag => {
+          return (
+          <Tag>#{tag}</Tag>
+          )
+        })}
+        
       </StyledLink>
     </LatestBlogWrapper>
   )

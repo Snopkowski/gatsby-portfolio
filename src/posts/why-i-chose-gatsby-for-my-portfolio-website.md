@@ -5,6 +5,7 @@ type: 'blog'
 date: 'October 17th 2019'
 description: 'This is my take on using Gatsby for a personal website'
 keywords: 'gatsby, portfolio, compare, seo, reasons to choose gatsby, why gatsby, gatsby vs nextjs, gatsby vs create react app'
+tags: ['react', 'gatsby', 'jamstack', 'opinion']
 ---
 
 ## I needed a new portfolio

@@ -37,7 +37,6 @@ const IndexPage = () => {
      display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 3rem;
-  /* margin: 0; */
   white-space: nowrap;
 
   > li{
