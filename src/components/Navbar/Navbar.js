@@ -14,6 +14,7 @@ const Navigation = styled.nav`
   align-self: center;
   max-width: 1200px;
   background-color: var(--bg);
+  transition: all 0.3s;
   
   @media (max-width: 768px) {
     padding: 0 10vw;
@@ -54,7 +55,7 @@ const Navbox = styled.div`
     top: 8vh;
     left: ${props => (props.open ? "-100%" : "0")};
     height: 92vh;
-    background: linear-gradient(190deg, var(--bg) 75%, var(--textNormal) 75%);
+    background: linear-gradient(190deg, var(--bg) 70%, var(--textNormal) 70%);
   }
 `
 

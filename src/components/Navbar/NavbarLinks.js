@@ -11,6 +11,9 @@ const NavItem = styled(Link)`
   margin: 0 1vw;
   transition: all 200ms ease-in;
   position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size:  90%;
 
   :after {
     position: absolute;
@@ -33,10 +36,9 @@ const NavItem = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    margin: 5% 0;
+    margin: 3% 0;
     font-size: 1.2rem;
     z-index: 6;
-    text-transform: uppercase;
   }
 `
 

@@ -19,7 +19,7 @@ const IndexPage = () => {
   grid-column-gap: 2rem;
   padding-bottom: 10vh;
   place-items: center;
-  padding: 5vh 0;
+  padding: 10vh 0;
 
   > p {
     text-align: justify;
@@ -41,6 +41,18 @@ const IndexPage = () => {
 
   > li{
     list-style: none;
+    position: relative;
+    ::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: var(--textNormal);
+      position: absolute;
+      left: -10px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   `
   return (
@@ -48,12 +60,12 @@ const IndexPage = () => {
         <Head title="Home" />
         <TwoColumnGrid>
           <h1>
-            Hello, my name is Wojciech. I'm a Web Developer based in Birmingham,
+            Hello, my name is Wojciech. <br/> I'm a Web Developer based in Birmingham,
             UK.
           </h1>
           <img src={Hero} alt="coding" />
         </TwoColumnGrid>
-        <h3>A little bit about me</h3>
+        <h3 style={{textTransform: 'uppercase', letterSpacing: '1px'}}>A little bit about me</h3>
         <TwoColumnGrid>
           <img src={About} alt="about" />
           <div>
@@ -71,21 +83,21 @@ const IndexPage = () => {
           </div>
         </TwoColumnGrid>
         <LatestBlog />
-        <h3>Tools I've been using</h3>
+        <h3 style={{textTransform: 'uppercase', letterSpacing: '1px'}}>Tools I've been using</h3>
         <TwoColumnGrid>
           <SkillsList>
-            <li>&#10003; HTML</li>
-            <li>&#10003; CSS</li>
-            <li>&#10003; JavaScript</li>
-            <li>&#10003; React</li>
-            <li>&#10003; Styled Components</li>
-            <li>&#10003; Gatsby</li>
-            <li>&#10003; CSS Modules</li>
-            <li>&#10003; Firebase</li>
-            <li>&#10003; GraphQL</li>
-            <li>&#10003; Npm</li>
-            <li>&#10003; Git</li>
-            <li>&#10003; Bash</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Styled Components</li>
+            <li>Gatsby</li>
+            <li>CSS Modules</li>
+            <li>Firebase</li>
+            <li>GraphQL</li>
+            <li>Npm</li>
+            <li>Git</li>
+            <li>Bash</li>
           </SkillsList>
           <img src={Skills} alt="skills" />
         </TwoColumnGrid>

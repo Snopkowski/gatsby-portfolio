@@ -32,6 +32,11 @@ const BlogPage = () => {
 
     const BlogItem = styled.li`
       margin: 1rem 0 0;
+      transition: transform 0.3s;
+
+      :hover {
+        transform: scale(1.05);
+      }
       a{
         display: block;
         padding: 1rem 0;
@@ -50,7 +55,7 @@ const BlogPage = () => {
     <div>
       <Layout>
         <Head title="Blog" description='I write about web developement, Front End JavaScript and anything else that intrests me.'/>
-        <h1>Posts</h1>
+        <h1>Latest blog posts</h1>
         <BlogList>
           {data.allMarkdownRemark.edges.map(edge => {
             return (

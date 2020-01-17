@@ -8,7 +8,7 @@ const Layout = props => {
   const MainWrapper = styled.div`
     margin: 0 auto;
     padding: 1rem;
-    max-width: 900px;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;

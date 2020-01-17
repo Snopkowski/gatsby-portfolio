@@ -28,7 +28,7 @@ const Contact = () => {
     <div>
       <Layout>
         <Head title="Contact" description='Tell me about your idea' />
-        <h1>Contact me</h1>
+        <h1>Get in touch</h1>
         <p>
          Fill out the form below or{" "}
           <ExtLink href="mailto:hello@snopkowski.com">

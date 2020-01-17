@@ -15,8 +15,9 @@ export const Button = styled.button`
   :hover {
       animation: stripes-move 20s infinite linear;
       background: repeating-linear-gradient(-45deg, var(--textNormal) 0, var(--textNormal) 0.5rem, var(--accent) 0.5rem, var(--accent) 0.99rem);
-      border: var(--textNormal) 2px solid;
+      border: 2px solid var(--accent);
       transform: scale(1.05);
+      color: var(--textLink);
   }
 
   @keyframes stripes-move {
