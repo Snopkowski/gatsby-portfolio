@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
-import { graphql } from "gatsby"
+import {Link, graphql } from "gatsby"
 import Head from "../components/head"
 import styled from "@emotion/styled"
 import { Tag } from "../components/common"
-import { Link } from "gatsby"
+
 
 export const query = graphql`
   query($slug: String!) {
@@ -32,21 +32,30 @@ const Blog = ({ data, pageContext }) => {
   const PrevNextWrap = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30%;
+    grid-template-columns: repeat(5, 1fr);
     margin: 5vh 0;
     text-align: center;
+
+    @media (max-wdith: 968px) {
+      font-size: 80%;
+    }
   `
   const Direction = styled.div`
-  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  white-space: nowrap;
   `
 
   const PrevNextItem = styled.div`
   text-decoration: none;
-  grid-column: ${props => props.right ? '2/3' : '1/2'}; 
+  grid-column: ${props => props.right ? '4/6' : '1/3'}; 
+  text-align: ${props => props.right ? 'right' : 'left'}; 
   transition: all 0.3s;
+  background: var(--textNormal);
+  color: var(--bg);
+  padding: 1rem;
+  border-radius: 4px;
+  width: 100%;
   :hover{
     transform: scale(1.05);
   }

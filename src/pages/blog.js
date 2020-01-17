@@ -9,7 +9,7 @@ import {Tag} from '../components/common'
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog"}}}, sort: {fields: frontmatter___date}) {
+      allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog"}}}, sort: {fields: frontmatter___order, order: DESC}) {
         edges {
           node {
             frontmatter {
@@ -17,6 +17,7 @@ const BlogPage = () => {
               slug
               date
               tags
+              order
             }
             timeToRead
           }
