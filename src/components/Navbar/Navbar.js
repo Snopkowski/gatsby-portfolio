@@ -14,7 +14,7 @@ const Navigation = styled.nav`
   padding: 0 3vw;
   align-self: center;
   max-width: 1400px;
-  transition: all 0.3s;
+  transition: position 0.3s;
   
   @media (max-width: 768px) {
     padding: 0 10vw;
@@ -25,7 +25,6 @@ const Navigation = styled.nav`
     right: 0;
     left: 0;
     background-color: var(--bg);
-    transition: all 0;
   }
 `
 

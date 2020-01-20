@@ -74,7 +74,7 @@ const IndexPage = () => {
         <TwoColumnGrid>
           <img src={About} alt="about" />
           <div>
-          <p>
+          {/* <p>
             I am looking forward to a much deeper dive into coding and programming.
             I’ve noticed as a self-taught Web Developer, learning about this
             field has a tremendous momentum to it. 
@@ -83,6 +83,9 @@ const IndexPage = () => {
             become a professional developer. My ultimate goal is to continually
             learn something new every day while I fine-tune my abilities now
             that I have fully committed to immersing myself in this field.
+          </p> */}
+          <p>
+            Over the last two years, I've been developing Web Applications using modern Front End technologies.
           </p>
           <Link to='/contact'><Button>Contact me</Button></Link>
           </div>
