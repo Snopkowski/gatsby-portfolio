@@ -13,11 +13,11 @@ html {
     --textLink: #d86a7e;
     --accent: #404040;
     --hr: #00000033;
-    background-color: var(--bg);
+    // background-color: var(--bg);
     --bgCode: #cccccc;
     background:
-    radial-gradient(#ececec 3px, transparent 4px),
-    radial-gradient(#ececec 3px, transparent 4px),
+    radial-gradient(#f8f8f8 3px, transparent 4px),
+    radial-gradient(#f8f8f8 3px, transparent 4px),
     linear-gradient(#fff 4px, transparent 0),
     linear-gradient(45deg, transparent 148px, transparent 150px, #fcfcfc 150px, #fcfcfc 152px, transparent 154px, transparent 218px),
     linear-gradient(-45deg, transparent 150px, transparent 152px, #fcfcfc 152px, #fcfcfc 154px, transparent 156px, transparent 218px),
@@ -34,7 +34,7 @@ html {
     --accent: #cf4961;
     --hr: #d86a7e;
     --bgCode: #3b3b3b;
-    background-color: var(--bg);
+    // background-color: var(--bg);
     background:
     radial-gradient(#222 3px, transparent 4px),
     radial-gradient(#222222 3px, transparent 4px),
