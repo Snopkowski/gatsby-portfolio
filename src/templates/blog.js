@@ -4,6 +4,8 @@ import {Link, graphql } from "gatsby"
 import Head from "../components/head"
 import styled from "@emotion/styled"
 import { Tag } from "../components/common"
+import HyvorTalk from 'hyvor-talk-react'
+
 
 
 export const query = graphql`
@@ -92,6 +94,7 @@ const Blog = ({ data, pageContext }) => {
         })}
       </BlogItem>
       <MarkdownWrap dangerouslySetInnerHTML={{ __html: post.html }} />
+      <HyvorTalk.Embed websiteId={178} loadMode="scroll"/>
       <PrevNextWrap>
         {prev && (
           <PrevNextItem as={Link} to={`blog/${prev.frontmatter.slug}`}>
