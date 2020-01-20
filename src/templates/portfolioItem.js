@@ -23,10 +23,14 @@ const PortfolioItem = ({ portfolio }) => {
     }
   `
 
+  const PortfolioImage = styled(Img)`
+  border-radius: 8px;
+  `
+
   return (
     <PortfolioItemWrap>
       <h2>{title}</h2>
-      <Img fluid={image.childImageSharp.fluid} />
+      <PortfolioImage fluid={image.childImageSharp.fluid} />
       <h3>{stack}</h3>
       <a href={live}><ButtonSmall>Live</ButtonSmall></a>
       <a href={source}><ButtonSmall>Code</ButtonSmall></a>

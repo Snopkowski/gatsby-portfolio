@@ -25,8 +25,9 @@ const IndexPage = () => {
     color: var(--textLink);
   }
 
-  > p {
+   p {
     text-align: justify;
+    font-size: 110%;
   }
   @media (max-width: 768px){
     grid-template-columns: 1fr;
@@ -69,7 +70,7 @@ const IndexPage = () => {
           </h1>
           <img src={Hero} alt="coding" />
         </TwoColumnGrid>
-        <h3 style={{ letterSpacing: '1px'}}>A little bit about me</h3>
+        <h3>A little bit about me</h3>
         <TwoColumnGrid>
           <img src={About} alt="about" />
           <div>
@@ -87,7 +88,7 @@ const IndexPage = () => {
           </div>
         </TwoColumnGrid>
         <LatestBlog />
-        <h3 style={{letterSpacing: '1px'}}>Tools I've been using</h3>
+        <h3>Tools I've been using</h3>
         <TwoColumnGrid>
           <SkillsList>
             <li>HTML</li>

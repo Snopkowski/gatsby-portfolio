@@ -24,6 +24,7 @@ const Toggle = () => {
     border-radius: 15px;
     background: var(--bgCode);
     cursor: pointer;
+    
     ::after {
       content: "";
       display: block;

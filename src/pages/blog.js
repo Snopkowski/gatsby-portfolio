@@ -34,9 +34,12 @@ const BlogPage = () => {
     const BlogItem = styled.li`
       margin: 1rem 0 0;
       transition: transform 0.3s;
+      padding: 1rem;
+      border-radius: 8px;
 
       :hover {
         transform: scale(1.05);
+        background-color: var(--bg);
       }
       a{
         display: block;

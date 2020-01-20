@@ -35,6 +35,10 @@ const LatestBlog = () => {
     position: relative;
     transition: transform 0.3s;
 
+    @media (max-width: 768px) {
+        text-align: center;
+      }
+
 
     p:first-child {
       font-weight: bold;

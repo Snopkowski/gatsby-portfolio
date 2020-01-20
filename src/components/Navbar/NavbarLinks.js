@@ -13,7 +13,7 @@ const NavItem = styled(Link)`
   position: relative;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size:  90%;
+  font-size:  80%;
 
   :after {
     position: absolute;

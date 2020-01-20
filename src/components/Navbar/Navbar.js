@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from 'styled-components'
 import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
+import Social from '../social'
 
 const Navigation = styled.nav`
   height: 10vh;
@@ -44,6 +45,7 @@ const Navbox = styled.div`
   justify-content: space-around;
   align-items: center;
   transition: all 0.3s;
+
 
 
   @media (max-width: 768px) {
@@ -108,6 +110,7 @@ const Navbar = () => {
       {navbarOpen ? (
         <Navbox >
           <NavbarLinks />
+          <Social />
         </Navbox>
       ) : (
         <Navbox open>

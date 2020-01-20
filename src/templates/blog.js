@@ -61,6 +61,12 @@ const Blog = ({ data, pageContext }) => {
   }
   `
 
+  const MarkdownWrap = styled.div`
+  background-color: var(--bg);
+  padding: 1rem;
+  border-radius: 8px;
+  `
+
   const { next, prev } = pageContext
   const post = data.markdownRemark
 
@@ -81,7 +87,7 @@ const Blog = ({ data, pageContext }) => {
           return <Tag>#{tag}</Tag>
         })}
       </BlogItem>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <MarkdownWrap dangerouslySetInnerHTML={{ __html: post.html }} />
       <PrevNextWrap>
         {prev && (
           <PrevNextItem as={Link} to={`blog/${prev.frontmatter.slug}`}>
