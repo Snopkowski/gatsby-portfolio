@@ -12,8 +12,7 @@ const Navigation = styled.nav`
   z-index: 2;
   padding: 0 3vw;
   align-self: center;
-  max-width: 1200px;
-  background-color: var(--bg);
+  max-width: 1400px;
   transition: all 0.3s;
   
   @media (max-width: 768px) {
@@ -24,6 +23,7 @@ const Navigation = styled.nav`
     left: 0;
     right: 0;
     left: 0;
+    background-color: var(--bg);
   }
 `
 

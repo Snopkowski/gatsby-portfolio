@@ -35,6 +35,7 @@ const LatestBlog = () => {
     position: relative;
     transition: transform 0.3s;
 
+
     p:first-child {
       font-weight: bold;
       text-transform: uppercase;

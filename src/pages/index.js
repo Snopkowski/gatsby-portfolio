@@ -17,9 +17,13 @@ const IndexPage = () => {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
-  padding-bottom: 10vh;
   place-items: center;
   padding: 10vh 0;
+
+
+  span {
+    color: var(--textLink);
+  }
 
   > p {
     text-align: justify;
@@ -60,12 +64,12 @@ const IndexPage = () => {
         <Head title="Home" />
         <TwoColumnGrid>
           <h1>
-            Hello, my name is Wojciech. <br/> I'm a Web Developer based in Birmingham,
+            Hello, my name is <span>Wojciech.</span> <br/> I'm a <span>Web Developer</span>  based in Birmingham,
             UK.
           </h1>
           <img src={Hero} alt="coding" />
         </TwoColumnGrid>
-        <h3 style={{textTransform: 'uppercase', letterSpacing: '1px'}}>A little bit about me</h3>
+        <h3 style={{ letterSpacing: '1px'}}>A little bit about me</h3>
         <TwoColumnGrid>
           <img src={About} alt="about" />
           <div>
@@ -83,7 +87,7 @@ const IndexPage = () => {
           </div>
         </TwoColumnGrid>
         <LatestBlog />
-        <h3 style={{textTransform: 'uppercase', letterSpacing: '1px'}}>Tools I've been using</h3>
+        <h3 style={{letterSpacing: '1px'}}>Tools I've been using</h3>
         <TwoColumnGrid>
           <SkillsList>
             <li>HTML</li>
