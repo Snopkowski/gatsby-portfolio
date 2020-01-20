@@ -13,17 +13,9 @@ html {
     --textLink: #d86a7e;
     --accent: #404040;
     --hr: #00000033;
-    // background-color: var(--bg);
+    background-color: var(--bg);
     --bgCode: #cccccc;
-    background:
-    radial-gradient(#f8f8f8 3px, transparent 4px),
-    radial-gradient(#f8f8f8 3px, transparent 4px),
-    linear-gradient(#fff 4px, transparent 0),
-    linear-gradient(45deg, transparent 148px, transparent 150px, #fcfcfc 150px, #fcfcfc 152px, transparent 154px, transparent 218px),
-    linear-gradient(-45deg, transparent 150px, transparent 152px, #fcfcfc 152px, #fcfcfc 154px, transparent 156px, transparent 218px),
-    #fff;
-    background-size: 218px 218px, 218px 218px,100% 12px, 218px 218px, 218px 218px;
-    background-position: 108px 110px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+background-image: repeating-linear-gradient(45deg, transparent, transparent 150px, #fcfcfc 150px, #fcfcfc 340px);
   }
   body.dark-mode {
 
@@ -260,7 +252,7 @@ html {
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
-    transition: all 0.3s;
+    // transition: all 0.3s;
 
   }
   
@@ -639,7 +631,6 @@ html {
   }
   pre code {
     background: none;
-    // line-height: 1.42;
   }
   pre code:before,
   pre code:after,

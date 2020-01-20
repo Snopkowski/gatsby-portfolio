@@ -24,6 +24,7 @@ const Navigation = styled.nav`
     right: 0;
     left: 0;
     background-color: var(--bg);
+    transition: all 0;
   }
 `
 
@@ -56,6 +57,7 @@ const Navbox = styled.div`
     left: ${props => (props.open ? "-100%" : "0")};
     height: 92vh;
     background: linear-gradient(190deg, var(--bg) 70%, var(--bgCode) 70%);
+    transition: all 0;
   }
 `
 
