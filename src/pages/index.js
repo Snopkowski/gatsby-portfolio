@@ -18,7 +18,7 @@ const IndexPage = () => {
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
   place-items: center;
-  padding: 10vh 0;
+  margin: 15vh 0;
 
 
   span {

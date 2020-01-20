@@ -65,6 +65,10 @@ const Blog = ({ data, pageContext }) => {
   background-color: var(--bg);
   padding: 1rem;
   border-radius: 8px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
   `
 
   const { next, prev } = pageContext

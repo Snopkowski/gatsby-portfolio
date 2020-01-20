@@ -31,7 +31,7 @@ const LatestBlog = () => {
     display: flex;
     place-items: center;
     place-content: center;
-    margin-bottom: 10vh;
+    margin-bottom: 15vh;
     position: relative;
     transition: transform 0.3s;
 
