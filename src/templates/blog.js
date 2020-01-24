@@ -1,12 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
-import {Link, graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Head from "../components/head"
 import styled from "@emotion/styled"
 import { Tag } from "../components/common"
-import HyvorTalk from 'hyvor-talk-react'
-
-
+import HyvorTalk from "hyvor-talk-react"
 
 export const query = graphql`
   query($slug: String!) {
@@ -43,34 +41,34 @@ const Blog = ({ data, pageContext }) => {
     }
   `
   const Direction = styled.div`
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
   `
 
   const PrevNextItem = styled.div`
-  text-decoration: none;
-  grid-column: ${props => props.right ? '4/6' : '1/3'}; 
-  text-align: ${props => props.right ? 'right' : 'left'}; 
-  transition: all 0.3s;
-  background: var(--textNormal);
-  color: var(--bg);
-  padding: 1rem;
-  border-radius: 4px;
-  width: 100%;
-  :hover{
-    transform: scale(1.05);
-  }
+    text-decoration: none;
+    grid-column: ${props => (props.right ? "4/6" : "1/3")};
+    text-align: ${props => (props.right ? "right" : "left")};
+    transition: all 0.3s;
+    background: var(--textNormal);
+    color: var(--bg);
+    padding: 1rem;
+    border-radius: 4px;
+    width: 100%;
+    :hover {
+      transform: scale(1.05);
+    }
   `
 
   const MarkdownWrap = styled.div`
-  background-color: var(--bg);
-  padding: 1rem;
-  border-radius: 8px;
+    background-color: var(--bg);
+    padding: 1rem;
+    border-radius: 8px;
 
-  @media (max-width: 768px) {
-    padding: 0;
-  }
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   `
 
   const { next, prev } = pageContext
@@ -94,7 +92,6 @@ const Blog = ({ data, pageContext }) => {
         })}
       </BlogItem>
       <MarkdownWrap dangerouslySetInnerHTML={{ __html: post.html }} />
-      <HyvorTalk.Embed websiteId={178} loadMode="scroll"/>
       <PrevNextWrap>
         {prev && (
           <PrevNextItem as={Link} to={`blog/${prev.frontmatter.slug}`}>
@@ -109,6 +106,7 @@ const Blog = ({ data, pageContext }) => {
           </PrevNextItem>
         )}
       </PrevNextWrap>
+      <HyvorTalk.Embed websiteId={178} loadMode="scroll" />
     </Layout>
   )
 }
