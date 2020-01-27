@@ -3,13 +3,16 @@ import Layout from "../components/layout"
 import { useStaticQuery, graphql } from "gatsby"
 import Head from "../components/head"
 import styled from "@emotion/styled"
-import {StyledLink} from '../components/common'
-import {Tag} from '../components/common'
+import { StyledLink } from "../components/common"
+import { Tag } from "../components/common"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog"}}}, sort: {fields: frontmatter___order, order: DESC}) {
+      allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "blog" } } }
+        sort: { fields: frontmatter___order, order: DESC }
+      ) {
         edges {
           node {
             frontmatter {
@@ -26,44 +29,30 @@ const BlogPage = () => {
     }
   `)
 
-  const BlogList = styled.ul`
-    list-style-type: none;
-    margin: 0;
-  `
-
-    const BlogItem = styled.li`
-      margin: 1rem 0 0;
-      transition: all 0.3s;
-      padding: 1rem;
-      border-radius: 8px;
-
-      :hover {
-        transform: scale(1.05);
-        background-color: var(--bg);
-      }
-      a{
-        display: block;
-        padding: 1rem 0;
-        text-decoration: none;
-        color: var(--textNormal);
-      }
-      h2 {
-        margin-bottom: 0;
-      }
-      p {
-        font-size: 0.7rem;
-    }
-    `
-
   return (
     <div>
       <Layout>
-        <Head title="Blog" description='I write about web developement, Front End JavaScript and anything else that intrests me.'/>
-        <h1>Latest blog posts</h1>
+        <Head
+          title="Blog"
+          description="I write about web developement, Front End JavaScript and anything else that intrests me."
+        />
+        <h1
+          data-sal="slide-left"
+          data-sal-duration="1000"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
+          Latest blog posts
+        </h1>
         <BlogList>
           {data.allMarkdownRemark.edges.map(edge => {
             return (
-              <BlogItem>
+              <BlogItem
+                data-sal="slide-up"
+                data-sal-duration="1000"
+                data-sal-delay="300"
+                data-sal-easing="ease"
+              >
                 <StyledLink to={`/blog/${edge.node.frontmatter.slug}`}>
                   <h2>{edge.node.frontmatter.title}</h2>
                   <p>
@@ -71,9 +60,7 @@ const BlogPage = () => {
                     read
                   </p>
                   {edge.node.frontmatter.tags.map(tag => {
-                    return(
-                    <Tag>#{tag}</Tag>
-                    )
+                    return <Tag>#{tag}</Tag>
                   })}
                 </StyledLink>
               </BlogItem>
@@ -84,5 +71,33 @@ const BlogPage = () => {
     </div>
   )
 }
-
 export default BlogPage
+
+const BlogList = styled.ul`
+  list-style-type: none;
+  margin: 0;
+`
+
+const BlogItem = styled.li`
+  margin: 1rem 0 0;
+  transition: all 0.3s;
+  padding: 1rem;
+  border-radius: 8px;
+
+  :hover {
+    transform: scale(1.05);
+    background-color: var(--bg);
+  }
+  a {
+    display: block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: var(--textNormal);
+  }
+  h2 {
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+`

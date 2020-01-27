@@ -5,38 +5,30 @@ import styled from "@emotion/styled"
 import {ExtLink, Button} from '../components/common'
 
 const Contact = () => {
-  const Form = styled.form`
-    width: 100%;
-
-    > input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 6px;
-      border: 2px solid var(--textNormal);
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-top: 3px;
-      margin-bottom: 16px;
-      resize: vertical;
-      background-color: var(--bg);
-      color: var(--textNormal);
-    }
-
-  `
   return (
     <div>
       <Layout>
         <Head title="Contact" description='Tell me about your idea' />
-        <h1>Get in touch</h1>
-        <p>
+        <h1
+        data-sal="slide-left"
+        data-sal-duration="1000"
+        data-sal-delay="300"
+        data-sal-easing="ease">Get in touch</h1>
+        <p
+        data-sal="slide-right"
+        data-sal-duration="1000"
+        data-sal-delay="300"
+        data-sal-easing="ease">
          Fill out the form below or{" "}
           <ExtLink href="mailto:hello@snopkowski.com">
             {" "}
             drop a message at hello@snopkowski.com
           </ExtLink>
         </p>
-        <Form
+        <Form data-sal="slide-up"
+        data-sal-duration="1000"
+        data-sal-delay="300"
+        data-sal-easing="ease"
           name="contact"
           method="POST"
           data-netlify="true"
@@ -58,3 +50,23 @@ const Contact = () => {
 }
 
 export default Contact
+
+  const Form = styled.form`
+    width: 100%;
+
+    > input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 6px;
+      border: 2px solid var(--textNormal);
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 3px;
+      margin-bottom: 16px;
+      resize: vertical;
+      background-color: var(--bg);
+      color: var(--textNormal);
+    }
+
+  `

@@ -26,7 +26,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sharp",
     "gatsby-transformer-remark",
-    `gatsby-plugin-scroll-reveal`,
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        duration: 1000
+      }
+    },
     `gatsby-plugin-emotion`,
     {
       resolve: 'gatsby-plugin-page-progress',
