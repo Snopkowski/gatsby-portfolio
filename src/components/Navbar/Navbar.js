@@ -95,7 +95,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <Navigation>
+    <Navigation >
       <Logo />
       <Toggle
         navbarOpen={navbarOpen}

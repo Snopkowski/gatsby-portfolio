@@ -18,8 +18,8 @@ const Logo = () => {
     query {
       file(name: { eq: "icon-noBG" }, extension: { eq: "png" }) {
         childImageSharp {
-          fluid(maxWidth: 50) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 40) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -28,7 +28,7 @@ const Logo = () => {
 
   return (
     <LogoWrap as={Link} to="/">
-      <Img imgStyle={{ objectFit: 'contain' }} fluid={data.file.childImageSharp.fluid} alt="logo" />
+      <Img imgStyle={{ objectFit: 'contain' }} fixed={data.file.childImageSharp.fixed} alt="logo" />
     </LogoWrap>
   )
 }
