@@ -61,15 +61,30 @@ const IndexPage = () => {
   return (
     <Layout>
       <Head title="Home" />
-      <TwoColumnGrid>
+      <TwoColumnGrid 
+      data-sal="slide-up"
+      data-sal-duration="1000"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+      >
         <h1>
           Hello, my name is <span>Wojciech.</span> <br /> I'm a{" "}
           <span>Web Developer</span> based in Birmingham, UK.
         </h1>
         <img src={Hero} alt="coding" />
       </TwoColumnGrid>
-      <h3>A little bit about me</h3>
-      <TwoColumnGrid>
+      <h3
+      data-sal="slide-left"
+      data-sal-duration="1000"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+      >A little bit about me</h3>
+      <TwoColumnGrid 
+      data-sal="slide-right"
+      data-sal-duration="1000"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+      >
         <img src={About} alt="about" />
         <div>
           <p>
@@ -83,8 +98,17 @@ const IndexPage = () => {
         </div>
       </TwoColumnGrid>
       <LatestBlog />
-      <h3>Tools I've been using</h3>
-      <TwoColumnGrid>
+      <h3
+      data-sal="slide-left"
+      data-sal-duration="1000"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+      >Tools I've been using</h3>
+      <TwoColumnGrid 
+      data-sal="slide-down"
+      data-sal-duration="1000"
+      data-sal-delay="300"
+      data-sal-easing="ease">
         <SkillsList>
           <li>HTML</li>
           <li>CSS</li>

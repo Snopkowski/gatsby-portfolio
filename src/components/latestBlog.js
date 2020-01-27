@@ -86,7 +86,11 @@ const LatestBlog = () => {
   `
   const latestBlog = data.allMarkdownRemark.edges[0].node.frontmatter
   return (
-    <LatestBlogWrapper>
+    <LatestBlogWrapper 
+    data-sal="zoom-in"
+      data-sal-duration="1000"
+      data-sal-delay="300"
+      data-sal-easing="ease">
       <StyledLink
         to={`/blog/${latestBlog.slug}`}
       >
