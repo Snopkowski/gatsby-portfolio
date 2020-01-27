@@ -37,7 +37,7 @@ const BlogPage = () => {
           description="I write about web developement, Front End JavaScript and anything else that intrests me."
         />
         <h1
-          data-sal="slide-left"
+          data-sal="slide-up"
           data-sal-duration="1000"
           data-sal-delay="300"
           data-sal-easing="ease"
@@ -50,7 +50,7 @@ const BlogPage = () => {
               <BlogItem
                 data-sal="slide-up"
                 data-sal-duration="1000"
-                data-sal-delay="300"
+                data-sal-delay="600"
                 data-sal-easing="ease"
               >
                 <StyledLink to={`/blog/${edge.node.frontmatter.slug}`}>

@@ -39,7 +39,7 @@ const Projects = () => {
     <Layout>
       <Head title="Projects" />
       <h1
-      data-sal="slide-left"
+      data-sal="slide-up"
       data-sal-duration="1000"
       data-sal-delay="300"
       data-sal-easing="ease">Recent projects</h1>
@@ -48,7 +48,7 @@ const Projects = () => {
           <ProjectsListItem
             data-sal="slide-up"
             data-sal-duration="1000"
-            data-sal-delay="300"
+            data-sal-delay="600"
             data-sal-easing="ease"
           >
             <PortfolioItem portfolio={item.node} />

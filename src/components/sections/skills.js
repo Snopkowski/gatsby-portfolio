@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <>
       <h3
-        data-sal="slide-left"
+        data-sal="slide-up"
         data-sal-duration="1000"
         data-sal-delay="300"
         data-sal-easing="ease"
@@ -14,7 +14,7 @@ const Skills = () => {
         Tools I've been using
       </h3>
       <TwoColumnGrid
-        data-sal="slide-down"
+        data-sal="slide-up"
         data-sal-duration="1000"
         data-sal-delay="300"
         data-sal-easing="ease"

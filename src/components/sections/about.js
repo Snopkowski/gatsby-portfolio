@@ -7,12 +7,13 @@ const About = () => {
   return (
     <>
       <h3
-      data-sal="slide-left"
+      data-sal="slide-up"
       data-sal-duration="1000"
       data-sal-delay="300"
-      data-sal-easing="ease">A little bit about me</h3>
+      data-sal-easing="ease"
+      >A little bit about me</h3>
       <TwoColumnGrid
-        data-sal="slide-right"
+        data-sal="slide-up"
         data-sal-duration="1000"
         data-sal-delay="300"
         data-sal-easing="ease"

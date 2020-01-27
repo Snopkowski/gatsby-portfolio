@@ -4,34 +4,6 @@ import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
 import Social from '../social'
 
-const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false)
-  
-  return (
-    <Navigation>
-      <Logo />
-      <Toggle
-        navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
-        >
-        {navbarOpen ? <Hamburger open /> : <Hamburger />}
-      </Toggle>
-      {navbarOpen ? (
-        <Navbox >
-          <NavbarLinks />
-          <Social />
-        </Navbox>
-      ) : (
-        <Navbox open>
-          <NavbarLinks />
-        </Navbox>
-      )}
-    </Navigation>
-  )
-}
-
-export default Navbar
-
 const Navigation = styled.nav`
   height: 10vh;
   display: flex;
@@ -42,7 +14,6 @@ const Navigation = styled.nav`
   padding: 0 3vw;
   align-self: center;
   max-width: 1400px;
-  transition: position 0.3s;
   
   @media (max-width: 768px) {
     padding: 0 10vw;
@@ -69,17 +40,15 @@ const Toggle = styled.div`
 const Navbox = styled.div`
   display: flex;
   height: 100%;
-  max-width: 100%;
   justify-content: space-around;
   align-items: center;
   transition: all 0.3s;
-
-
+  overflow: hidden;
 
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     justify-content: flex-start;
     padding-top: 10vh;
     background-color: var(--bg);
@@ -122,3 +91,30 @@ const Hamburger = styled.div`
     top: 10px;
   }
 `
+const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false)
+
+  return (
+    <Navigation>
+      <Logo />
+      <Toggle
+        navbarOpen={navbarOpen}
+        onClick={() => setNavbarOpen(!navbarOpen)}
+      >
+        {navbarOpen ? <Hamburger open /> : <Hamburger />}
+      </Toggle>
+      {navbarOpen ? (
+        <Navbox >
+          <NavbarLinks />
+          <Social />
+        </Navbox>
+      ) : (
+        <Navbox open>
+          <NavbarLinks />
+        </Navbox>
+      )}
+    </Navigation>
+  )
+}
+
+export default Navbar

@@ -10,14 +10,14 @@ const Contact = () => {
       <Layout>
         <Head title="Contact" description='Tell me about your idea' />
         <h1
-        data-sal="slide-left"
+        data-sal="slide-up"
         data-sal-duration="1000"
         data-sal-delay="300"
         data-sal-easing="ease">Get in touch</h1>
         <p
-        data-sal="slide-right"
+        data-sal="slide-up"
         data-sal-duration="1000"
-        data-sal-delay="300"
+        data-sal-delay="600"
         data-sal-easing="ease">
          Fill out the form below or{" "}
           <ExtLink href="mailto:hello@snopkowski.com">
@@ -27,7 +27,7 @@ const Contact = () => {
         </p>
         <Form data-sal="slide-up"
         data-sal-duration="1000"
-        data-sal-delay="300"
+        data-sal-delay="900"
         data-sal-easing="ease"
           name="contact"
           method="POST"

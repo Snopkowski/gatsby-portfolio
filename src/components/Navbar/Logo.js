@@ -28,7 +28,7 @@ const Logo = () => {
 
   return (
     <LogoWrap as={Link} to="/">
-      <Img fluid={data.file.childImageSharp.fluid} alt="logo" />
+      <Img imgStyle={{ objectFit: 'contain' }} fluid={data.file.childImageSharp.fluid} alt="logo" />
     </LogoWrap>
   )
 }
