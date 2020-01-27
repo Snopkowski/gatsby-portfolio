@@ -4,6 +4,34 @@ import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
 import Social from '../social'
 
+const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false)
+  
+  return (
+    <Navigation>
+      <Logo />
+      <Toggle
+        navbarOpen={navbarOpen}
+        onClick={() => setNavbarOpen(!navbarOpen)}
+        >
+        {navbarOpen ? <Hamburger open /> : <Hamburger />}
+      </Toggle>
+      {navbarOpen ? (
+        <Navbox >
+          <NavbarLinks />
+          <Social />
+        </Navbox>
+      ) : (
+        <Navbox open>
+          <NavbarLinks />
+        </Navbox>
+      )}
+    </Navigation>
+  )
+}
+
+export default Navbar
+
 const Navigation = styled.nav`
   height: 10vh;
   display: flex;
@@ -93,30 +121,3 @@ const Hamburger = styled.div`
     top: 10px;
   }
 `
-const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false)
-
-  return (
-    <Navigation>
-      <Logo />
-      <Toggle
-        navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
-      >
-        {navbarOpen ? <Hamburger open /> : <Hamburger />}
-      </Toggle>
-      {navbarOpen ? (
-        <Navbox >
-          <NavbarLinks />
-          <Social />
-        </Navbox>
-      ) : (
-        <Navbox open>
-          <NavbarLinks />
-        </Navbox>
-      )}
-    </Navigation>
-  )
-}
-
-export default Navbar
