@@ -42,7 +42,7 @@ const Navbox = styled.div`
   height: 100%;
   justify-content: space-around;
   align-items: center;
-  transition: all 0.3s;
+  transition: left 0.3s;
   overflow: hidden;
 
   @media (max-width: 768px) {
