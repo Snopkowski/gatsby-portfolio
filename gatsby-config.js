@@ -22,6 +22,12 @@ module.exports = {
         trackingId: "UA-147523947-1",
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.snopkowski.com`,
+      },
+    },
     "gatsby-plugin-sass",
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sharp",

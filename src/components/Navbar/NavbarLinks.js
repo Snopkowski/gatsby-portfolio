@@ -5,7 +5,7 @@ import Toggle from "../dark-mode/Toggle"
 
 const links  = [
   { slug: "/", page: "About", status: false },
-  { slug: "/projects", page: "Projects", status: true },
+  { slug: "projects", page: "Projects", status: true },
   { slug: "blog", page: "Blog", status: true },
   { slug: "contact", page: "Contact", status: false }
 ]
