@@ -36,23 +36,11 @@ const BlogPage = () => {
           title="Blog"
           description="I write about web developement, Front End JavaScript and anything else that intrests me."
         />
-        <h1
-          data-sal="slide-up"
-          data-sal-duration="1000"
-          data-sal-delay="300"
-          data-sal-easing="ease"
-        >
-          Latest blog posts
-        </h1>
+        <h1>Latest blog posts</h1>
         <BlogList>
           {data.allMarkdownRemark.edges.map(edge => {
             return (
-              <BlogItem
-                data-sal="slide-up"
-                data-sal-duration="1000"
-                data-sal-delay="600"
-                data-sal-easing="ease"
-              >
+              <BlogItem>
                 <StyledLink to={`/blog/${edge.node.frontmatter.slug}`}>
                   <h2>{edge.node.frontmatter.title}</h2>
                   <p>

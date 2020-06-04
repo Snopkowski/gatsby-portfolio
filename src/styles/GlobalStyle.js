@@ -1,3 +1,6 @@
+import {createGlobalStyle} from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
 html {
     font-family: 'lato';
     -ms-text-size-adjust: 100%;
@@ -632,3 +635,5 @@ background-image: repeating-linear-gradient(45deg, transparent, transparent 150p
       font-size: 100%;
     }
   }
+`
+export default GlobalStyle

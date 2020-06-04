@@ -1,23 +1,13 @@
 import React from "react"
-import {TwoColumnGrid, Button} from '../common'
-import AboutImage from '../../images/about.svg'
-import {Link} from 'gatsby'
+import { TwoColumnGrid, Button } from "../common"
+import AboutImage from "../../images/about.svg"
+import { Link } from "gatsby"
 
 const About = () => {
   return (
     <>
-      <h3
-      data-sal="slide-up"
-      data-sal-duration="1000"
-      data-sal-delay="300"
-      data-sal-easing="ease"
-      >A little bit about me</h3>
-      <TwoColumnGrid
-        data-sal="slide-up"
-        data-sal-duration="1000"
-        data-sal-delay="300"
-        data-sal-easing="ease"
-      >
+      <h3>A little bit about me</h3>
+      <TwoColumnGrid>
         <img src={AboutImage} alt="about" />
         <div>
           <p>

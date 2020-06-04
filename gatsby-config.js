@@ -10,12 +10,11 @@ module.exports = {
     author: "Wojciech Snopkowski",
     description: "I'm Wojciech Snopkowski, a Front-End Developer based in Birmingham, UK.",
     siteUrl: "https://snopkowski.com",
-    keywords: 'web developer, developer, birmingham, javascript, website, wojciech snopkowski, snopkowski'
+    keywords: 'web developer, developer, birmingham, javascript, react, website, wojciech snopkowski, snopkowski'
   },
   plugins: [
     `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -25,19 +24,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.snopkowski.com`,
+        siteUrl: `https://snopkowski.com`,
       },
     },
-    "gatsby-plugin-sass",
     `gatsby-transformer-sharp`,
     "gatsby-plugin-sharp",
-    "gatsby-transformer-remark",
-    {
-      resolve: `gatsby-plugin-scroll-reveal`,
-      options: {
-        duration: 1000
-      }
-    },
     `gatsby-plugin-emotion`,
     {
       resolve: 'gatsby-plugin-page-progress',
@@ -74,7 +65,7 @@ module.exports = {
         ],
       },
     },
-  
+    
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -82,7 +73,7 @@ module.exports = {
         name: 'src',
       }
     },
-  
+    
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -95,6 +86,7 @@ module.exports = {
         theme_color: `#d86a7e`
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     'gatsby-plugin-robots-txt'
   ],

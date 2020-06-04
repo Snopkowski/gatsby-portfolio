@@ -38,19 +38,10 @@ const Projects = () => {
   return (
     <Layout>
       <Head title="Projects" />
-      <h1
-      data-sal="slide-up"
-      data-sal-duration="1000"
-      data-sal-delay="300"
-      data-sal-easing="ease">Recent projects</h1>
+      <h1>Recent projects</h1>
       <ProjectsList>
         {items.edges.map(item => (
-          <ProjectsListItem
-            data-sal="slide-up"
-            data-sal-duration="1000"
-            data-sal-delay="600"
-            data-sal-easing="ease"
-          >
+          <ProjectsListItem>
             <PortfolioItem portfolio={item.node} />
           </ProjectsListItem>
         ))}

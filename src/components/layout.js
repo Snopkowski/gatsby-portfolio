@@ -1,8 +1,8 @@
 import React from "react"
 import Footer from "./footer"
-import "../styles/index.scss"
 import styled from "@emotion/styled"
 import Navbar from './Navbar/Navbar'
+import GlobalStyle from '../styles/GlobalStyle'
 
 const Layout = props => {
   const MainWrapper = styled.div`
@@ -20,6 +20,7 @@ const Layout = props => {
 
   return (
     <>
+      <GlobalStyle />
       <Navbar />
       <MainWrapper>
         {props.children}
