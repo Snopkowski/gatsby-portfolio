@@ -24,13 +24,13 @@ const Contact = () => {
           data-netlify-honeypot="bot-field"
           action="/thanks/"
         >
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" aria-label='form' name="form-name" value="contact" />
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input aria-label='name' type="text" id="name" name="name" required />
           <label htmlFor="email">Your Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input aria-label='email' type="email" id="email" name="email" required />
           <label htmlFor="message">Message:</label>
-          <textarea name="message" id="message" type="text" rows="6" required />
+          <textarea name="message" aria-label='message' id="message" type="text" rows="6" required />
           <Button type="submit">Send</Button>
         </Form>
       </Layout>

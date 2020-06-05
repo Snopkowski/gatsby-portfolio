@@ -244,7 +244,7 @@ background-image: repeating-linear-gradient(45deg, transparent, transparent 150p
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
-    transition: all 0.3s;
+    /* transition: all 0.3s; */
 
   }
   
