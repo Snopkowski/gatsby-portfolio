@@ -5,10 +5,11 @@ import Head from "../components/head"
 import styled from "@emotion/styled"
 import { Tag } from "../components/common"
 import HyvorTalk from "hyvor-talk-react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
         slug
@@ -17,7 +18,7 @@ export const query = graphql`
         keywords
         tags
       }
-      html
+      body
       timeToRead
     }
   }
@@ -71,7 +72,7 @@ const Blog = ({ data, pageContext }) => {
   `
 
   const { next, prev } = pageContext
-  const post = data.markdownRemark
+  const post = data.mdx
 
   console.log(pageContext)
   return (
@@ -90,7 +91,7 @@ const Blog = ({ data, pageContext }) => {
           return <Tag>#{tag}</Tag>
         })}
       </BlogItem>
-      <MarkdownWrap dangerouslySetInnerHTML={{ __html: post.html }} />
+      +<MDXRenderer>{post.body}</MDXRenderer>
       <PrevNextWrap>
         {prev && (
           <PrevNextItem as={Link} to={`blog/${prev.frontmatter.slug}`}>

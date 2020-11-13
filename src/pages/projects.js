@@ -7,9 +7,9 @@ import styled from "@emotion/styled"
 import { ExtLink } from "../components/common"
 
 const Projects = () => {
-  const { allMarkdownRemark: items } = useStaticQuery(graphql`
+  const { allMdx: items } = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
+      allMdx(
         filter: { frontmatter: { type: { eq: "project" } } }
         sort: { fields: frontmatter___order }
       ) {

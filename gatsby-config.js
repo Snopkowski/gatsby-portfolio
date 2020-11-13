@@ -8,9 +8,11 @@ module.exports = {
   siteMetadata: {
     title: "Snopkowski.com",
     author: "Wojciech Snopkowski",
-    description: "I'm Wojciech Snopkowski, a Front-End Developer based in Birmingham, UK.",
+    description:
+      "I'm Wojciech Snopkowski, a Front-End Developer based in Birmingham, UK.",
     siteUrl: "https://snopkowski.com",
-    keywords: 'web developer, developer, birmingham, javascript, react, website, wojciech snopkowski, snopkowski'
+    keywords:
+      "web developer, developer, birmingham, javascript, react, website, wojciech snopkowski, snopkowski",
   },
   plugins: [
     `gatsby-plugin-netlify`,
@@ -31,49 +33,50 @@ module.exports = {
     "gatsby-plugin-sharp",
     `gatsby-plugin-emotion`,
     {
-      resolve: 'gatsby-plugin-page-progress',
+      resolve: "gatsby-plugin-page-progress",
       options: {
         height: 3,
         prependToBody: false,
-        excludePaths: ['/contact', '/blog'],
+        excludePaths: ["/contact", "/blog"],
         color: `#d86a7e`,
-      }
+      },
     },
-    
+    `gatsby-plugin-postcss`,
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: "gatsby-plugin-mdx",
       options: {
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
           "gatsby-remark-relative-images",
           `gatsby-remark-lazy-load`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-vscode`,
           `gatsby-remark-responsive-iframe`,
           {
-            resolve: 'gatsby-remark-external-links',
+            resolve: "gatsby-remark-external-links",
             options: {
-              target: '_blank',
-              rel: 'noreferrer',
-            }
+              target: "_blank",
+              rel: "noreferrer",
+            },
           },
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 900
-            }
-          }
+              maxWidth: 900,
+            },
+          },
         ],
       },
     },
-    
+
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src`,
-        name: 'src',
-      }
+        name: "src",
+      },
     },
-    
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -83,11 +86,11 @@ module.exports = {
         icon: `src/images/icon.png`,
         display: `minimal-ui`,
         background_color: `#111`,
-        theme_color: `#d86a7e`
+        theme_color: `#d86a7e`,
       },
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
-    'gatsby-plugin-robots-txt'
+    "gatsby-plugin-robots-txt",
   ],
 }

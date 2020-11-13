@@ -9,7 +9,7 @@ import { Tag } from "../components/common"
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
+      allMdx(
         filter: { frontmatter: { type: { eq: "blog" } } }
         sort: { fields: frontmatter___order, order: DESC }
       ) {
@@ -38,7 +38,7 @@ const BlogPage = () => {
         />
         <h1>Latest blog posts</h1>
         <BlogList>
-          {data.allMarkdownRemark.edges.map(edge => {
+          {data.allMdx.edges.map(edge => {
             return (
               <BlogItem>
                 <StyledLink to={`/blog/${edge.node.frontmatter.slug}`}>

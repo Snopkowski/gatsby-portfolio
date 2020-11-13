@@ -3,12 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import { StyledLink, Tag } from "./common"
 
-
-
 const LatestBlog = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
+      allMdx(
         sort: { fields: frontmatter___date }
         filter: { frontmatter: { type: { eq: "blog" } } }
         limit: 1
@@ -36,16 +34,14 @@ const LatestBlog = () => {
     transition: transform 0.3s;
 
     @media (max-width: 768px) {
-        text-align: center;
-      }
-
+      text-align: center;
+    }
 
     p:first-child {
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
 
     :hover {
       transform: scale(1.05);
@@ -84,20 +80,15 @@ const LatestBlog = () => {
       width: 100%;
     }
   `
-  const latestBlog = data.allMarkdownRemark.edges[0].node.frontmatter
+  const latestBlog = data.allMdx.edges[0].node.frontmatter
   return (
-    <LatestBlogWrapper >
-      <StyledLink
-        to={`/blog/${latestBlog.slug}`}
-      >
+    <LatestBlogWrapper>
+      <StyledLink to={`/blog/${latestBlog.slug}`}>
         <p>Latest Blog Post</p>
         <h3>{latestBlog.title}</h3>
         {latestBlog.tags.map(tag => {
-          return (
-          <Tag>#{tag}</Tag>
-          )
+          return <Tag>#{tag}</Tag>
         })}
-        
       </StyledLink>
     </LatestBlogWrapper>
   )
