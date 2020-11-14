@@ -1,8 +1,7 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 html {
-    font-family: 'lato';
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     
@@ -236,7 +235,10 @@ background-image: repeating-linear-gradient(45deg, transparent, transparent 150p
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     color: var(--textNormal);
-    font-family: lato;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.font-serif	font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+.font-mono	font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;

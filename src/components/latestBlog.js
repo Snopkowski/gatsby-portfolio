@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "@emotion/styled"
-import { StyledLink, Tag } from "./common"
+import React from 'react'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import styled from '@emotion/styled'
+import { StyledLink, Tag } from './common'
 
 const LatestBlog = () => {
   const data = useStaticQuery(graphql`
@@ -55,7 +55,7 @@ const LatestBlog = () => {
     ::after {
       position: absolute;
       top: 0;
-      content: "";
+      content: '';
       display: block;
       height: 1px;
       background: var(--textNormal);
@@ -82,15 +82,15 @@ const LatestBlog = () => {
   `
   const latestBlog = data.allMdx.edges[0].node.frontmatter
   return (
-    <LatestBlogWrapper>
-      <StyledLink to={`/blog/${latestBlog.slug}`}>
+    <div>
+      <Link to={`/blog/${latestBlog.slug}`}>
         <p>Latest Blog Post</p>
         <h3>{latestBlog.title}</h3>
         {latestBlog.tags.map(tag => {
-          return <Tag>#{tag}</Tag>
+          return <p>#{tag}</p>
         })}
-      </StyledLink>
-    </LatestBlogWrapper>
+      </Link>
+    </div>
   )
 }
 

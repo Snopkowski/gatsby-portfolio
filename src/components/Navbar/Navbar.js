@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import NavbarLinks from "./NavbarLinks"
-import Logo from "./Logo"
-import Social from '../social'
+import NavbarLinks from './NavbarLinks'
+import Logo from './Logo'
+// import Social from '../social'
 
 const Navigation = styled.nav`
   height: 10vh;
@@ -14,7 +14,7 @@ const Navigation = styled.nav`
   padding: 0 3vw;
   align-self: center;
   max-width: 1400px;
-  
+
   @media (max-width: 768px) {
     padding: 0 10vw;
     position: sticky;
@@ -53,12 +53,11 @@ const Navbox = styled.div`
     padding-top: 10vh;
     background-color: var(--bg);
     top: 8vh;
-    left: ${props => (props.open ? "-100%" : "0")};
+    left: ${props => (props.open ? '-100%' : '0')};
     height: 92vh;
     background: linear-gradient(190deg, var(--bg) 70%, var(--textNormal) 70%);
   }
 `
-
 
 const Hamburger = styled.div`
   background-color: var(--textNormal);
@@ -67,27 +66,27 @@ const Hamburger = styled.div`
   transition: all 0.3s linear;
   align-self: center;
   position: relative;
-  transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
+  transform: ${props => (props.open ? 'rotate(-45deg)' : 'inherit')};
 
   ::before,
   ::after {
     width: 30px;
     height: 2px;
     background-color: var(--textNormal);
-    content: "";
+    content: '';
     position: absolute;
     transition: all 0.3s linear;
   }
 
   ::before {
     transform: ${props =>
-      props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
+      props.open ? 'rotate(-90deg) translate(-10px, 0px)' : 'rotate(0deg)'};
     top: -10px;
   }
 
   ::after {
-    opacity: ${props => (props.open ? "0" : "1")};
-    transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
+    opacity: ${props => (props.open ? '0' : '1')};
+    transform: ${props => (props.open ? 'rotate(90deg) ' : 'rotate(0deg)')};
     top: 10px;
   }
 `
@@ -95,7 +94,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <Navigation >
+    <Navigation>
       <Logo />
       <Toggle
         navbarOpen={navbarOpen}
@@ -104,9 +103,9 @@ const Navbar = () => {
         {navbarOpen ? <Hamburger open /> : <Hamburger />}
       </Toggle>
       {navbarOpen ? (
-        <Navbox >
+        <Navbox>
           <NavbarLinks />
-          <Social />
+          {/* <Social /> */}
         </Navbox>
       ) : (
         <Navbox open>
